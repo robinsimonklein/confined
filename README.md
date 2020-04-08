@@ -1,4 +1,5 @@
-# confinement
+# Confined
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3dcd2254-6385-4583-af32-020848a896d6/deploy-status)](https://app.netlify.com/sites/confined/deploys)
 
 ## Project setup
 ```
