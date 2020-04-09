@@ -5,8 +5,8 @@
                 <img src="@/assets/svg/coronavirus.svg" />
             </div>
             <div class="home__intro--text">
-                <h1 Home class="home__intro--title">DURÉE DE CONFINEMENT</h1>
-                <h2 Home class="home__intro--subtitle">Pour le COVID19</h2>
+                <h1 class="home__intro--title">DURÉE DE CONFINEMENT</h1>
+                <h2 class="home__intro--subtitle">Pour le COVID19</h2>
                 <p>Le monde connaît actuellement une pandémie planétaire de la maladie <a href="https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19" target="_blank">COVID-19</a>,
                     causée par le <a href="https://fr.wikipedia.org/wiki/Coronavirus" target="_blank">Coronavirus</a>. Afin de stopper la propagation du virus, de nombreux
                     pays ont mis en place le confinement de tous leurs habitants.<br/>
@@ -54,7 +54,10 @@
                             min: 'min.',
                             sec: 'sec.',
                         },
-                        beginning: new Date("2020-03-17T12:00").getTime(),
+                        beginning: {
+                            date: "2020-03-17",
+                            time: "12:00"
+                        },
                     },
                     {
                         name: 'Italie',
@@ -67,7 +70,10 @@
                             min: 'min.',
                             sec: 'sec.',
                         },
-                        beginning: new Date("2020-03-09").getTime(),
+                        beginning: {
+                            date: "2020-03-09",
+                            time: "00:00"
+                        },
                     },
                     {
                         name: 'Espagne',
@@ -80,7 +86,10 @@
                             min: 'min.',
                             sec: 'sec.',
                         },
-                        beginning: new Date("2020-03-15").getTime(),
+                        beginning: {
+                            date: "2020-03-15",
+                            time: "00:00"
+                        },
                     }
                 ]
             }

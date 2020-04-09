@@ -24,7 +24,6 @@
         margin: 0;
         padding: 0;
         background: #011627;
-        // color: $primary;
     }
 
     #app {
