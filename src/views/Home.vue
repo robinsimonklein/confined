@@ -27,8 +27,12 @@
                         name: 'France',
                         flag: 'france',
                         text: {
-                            in_country: 'En France',
-                            since: 'Confinés depuis'
+                            in_country: 'France',
+                            since: 'Confinés depuis',
+                            days: 'jours',
+                            hours: 'heures',
+                            min: 'min.',
+                            sec: 'sec.',
                         },
                         beginning: new Date("2020-03-17T12:00").getTime(),
                     }
