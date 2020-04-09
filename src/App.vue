@@ -1,51 +1,32 @@
 <template>
-    <div id="app">
-        <div class="container">
-            <CountryTimer
-                    v-for="(country, key) in countries"
-                    :key="key"
-                    :name="country.name"
-                    :beginning="country.beginnig"
-            />
-        </div>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
+    <router-view/>
+  </div>
 </template>
 
-<script>
-    import CountryTimer from "./components/CountryTimer";
-    export default {
-        name: 'App',
-        components: {CountryTimer},
-        data() {
-            return {
-                countries: [
-                    {
-                        name: 'France',
-                        tag: 'france',
-                        beginnig: new Date("2020-03-17T12:00").getTime(),
-                    }
-                ]
-            }
-        },
-    }
-</script>
-
 <style lang="scss">
-    body {
-        margin: 0;
-        padding: 0;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
     }
-    #app {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: white;
-        background: #2c3e50;
-    }
+  }
+}
 </style>
