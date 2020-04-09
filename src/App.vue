@@ -34,8 +34,13 @@
         flex: 1;
         width: 100%;
         padding: 0 1rem;
+
+        @media screen and (max-width: 548px){
+            padding: 0 .2rem;
+        }
     }
 </style>
+
 <script>
     import AppFooter from "./components/AppFooter";
     export default {

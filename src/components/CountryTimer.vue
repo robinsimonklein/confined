@@ -1,15 +1,17 @@
 <template>
     <div class="timer">
-        <img class="timer__flag" :src="require(`@/assets/flags/${flag}.svg`)" />
-        <span class="timer__country">
-            {{ text.in_country }}
-        </span>
-        <p class="timer__text">{{ text.since }}</p>
-        <span v-if="largeScreen" class="timer__count">{{ `${spent.days} ${text.days}, ${spent.hours} ${text.hours}, ${spent.minutes} ${text.min}, ${spent.seconds} ${text.sec}` }}</span>
-        <span v-else class="timer__count">
-            {{ `${spent.days} jours` }}<br>
-            {{ `${spent.hours}h ${spent.minutes}m ${spent.seconds}s` }}
-        </span>
+        <div class="timer__wrap">
+            <img class="timer__flag" :src="require(`@/assets/flags/${flag}.svg`)" />
+            <span class="timer__country">
+                {{ text.in_country }}
+            </span>
+            <p class="timer__text">{{ text.since }}</p>
+            <span v-if="largeScreen" class="timer__count">{{ `${spent.days} ${text.days}, ${spent.hours} ${text.hours}, ${spent.minutes} ${text.min}, ${spent.seconds} ${text.sec}` }}</span>
+            <span v-else class="timer__count">
+                {{ `${spent.days} jours` }}<br>
+                {{ `${spent.hours}h ${spent.minutes}m ${spent.seconds}s` }}
+            </span>
+        </div>
     </div>
 </template>
 
@@ -62,13 +64,24 @@
 
 <style lang="scss" scoped>
 .timer {
-    margin: 5rem 0;
+    margin: 8rem 0;
+
+    @media screen and (max-width: 548px) {
+        margin: 4rem 0;
+    }
+
+    &__wrap {
+        display: inline-flex;
+        flex-direction: column;
+        padding: 2rem 2rem;
+        background: #001b31
+    }
 
     &__country {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 2.2rem;
+        margin-bottom: 2rem;
         font-weight: bold;
     }
 
@@ -79,7 +92,7 @@
 
     &__text {
         font-size: 1.5rem;
-        margin: .5rem 0;
+        margin: .4rem 0;
     }
 
     &__count {
