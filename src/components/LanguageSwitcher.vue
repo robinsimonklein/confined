@@ -29,9 +29,9 @@
         },
         methods: {
             changeLanguage(lang) {
-                const to = this.$router.resolve({ params: { lang } })
+                // const to = this.$router.resolve({ params: { lang } })
                 return Trans.changeLanguage(lang).then(() => {
-                    this.$router.push(to.location)
+                    this.$router.push('/'+lang)
                 })
             }
         }

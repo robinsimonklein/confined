@@ -36,5 +36,16 @@
     "ireland": "Ireland",
     "finland": "Finland",
     "new_zealand": "New Zealand"
+  },
+  "pages": {
+    "home": {
+      "meta": {
+        "title": "How long have we been confined ? - COVID 19 - Coronavirus",
+        "description": "A site that tells you just how long you've been confined. (If you too are not sure anymore)",
+        "image": "/confined_cover_en.jpg",
+        "locale": "en_UK",
+        "url": "https://confined.netlify.com/en"
+      }
+    }
   }
 }

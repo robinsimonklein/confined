@@ -10,7 +10,7 @@
             <span v-if="largeScreen" class="timer__count">{{ `${spent.days} ${$t('date.days')}, ${spent.hours} ${$t('date.hours')}, ${spent.minutes} ${$t('date.min')}, ${spent.seconds} ${$t('date.sec')}` }}</span>
             <span v-else class="timer__count">
                 {{ `${spent.days} ${$t('date.days')}` }}<br>
-                {{ `${spent.hours}h ${spent.minutes}m ${spent.seconds}s` }}
+                {{ `${spent.hours}${$t('date.hours_letter')} ${spent.minutes}${$t('date.min_letter')} ${spent.seconds}${$t('date.sec_letter')}` }}
             </span>
             <span class="timer__date">({{ beginningDateString }})</span>
         </div>

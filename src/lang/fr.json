@@ -36,5 +36,16 @@
     "ireland": "Irlande",
     "finland": "Finlande",
     "new_zealand": "Nouvelle Zélande"
+  },
+  "pages": {
+    "home": {
+      "meta": {
+        "title": "Confinés depuis quand ? - COVID 19 - Coronavirus",
+        "description": "Un site qui vous dit juste depuis combien de temps vous êtes confiné(e) chez vous. (Si vous aussi vous ne savez plus trop)",
+        "image": "/confined_cover_fr.jpg",
+        "locale": "fr_FR",
+        "url": "https://confined.netlify.com/fr"
+      }
+    }
   }
 }

@@ -82,6 +82,36 @@ const Trans = {
     isLangSupported (lang) {
         return Trans.supportedLanguages.includes(lang)
     },
+    setMeta(meta) {
+
+        console.log(meta)
+
+        // If a route with a title was found, set the document (page) title to that value.
+        if(meta) document.title = i18n.t(meta.title);
+
+        // Remove any stale meta tags from the document using the key attribute we set below.
+        Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map(el => el.parentNode.removeChild(el));
+
+        // Skip rendering meta tags if there are none.
+        if(!meta) return;
+
+        // Turn the meta tag definitions into actual elements in the head.
+        meta.metaTags.map(tagDef => {
+            const tag = document.createElement('meta');
+
+
+            Object.keys(tagDef).forEach((key) => {
+                tag.setAttribute(key, key === 'content' && tagDef.trans ? i18n.t(tagDef[key]) : tagDef[key]);
+            });
+
+            // We use this to track which meta tags we create, so we don't interfere with other ones.
+            tag.setAttribute('data-vue-router-controlled', '');
+
+            return tag;
+        })
+            // Add the meta tags to the document head.
+            .forEach(tag => document.head.appendChild(tag));
+    },
     /**
      * Checks if the route's param is supported, if not, redirects to the first supported one.
      * @param {Route} to
@@ -92,8 +122,13 @@ const Trans = {
     routeMiddleware (to, from, next) {
         // Load async message files here
         const lang = to.params.lang
+
+        // Routing
         if (!Trans.isLangSupported(lang)) return next(Trans.getUserSupportedLang())
-        return Trans.changeLanguage(lang).then(() => next())
+        return Trans.changeLanguage(lang).then(() => {
+            Trans.setMeta(to.meta)
+            next()
+        })
     },
     /**
      * Returns a new route object that has the current language already defined
