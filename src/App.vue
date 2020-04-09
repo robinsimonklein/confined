@@ -1,41 +1,32 @@
 <template>
     <div id="app">
-        <h1>Confinés depuis</h1>
-        <span>{{ `${days} jours, ${hours} heures, ${minutes} min., ${seconds} sec.` }}</span>
+        <div class="container">
+            <CountryTimer
+                    v-for="(country, key) in countries"
+                    :key="key"
+                    :name="country.name"
+                    :beginning="country.beginnig"
+            />
+        </div>
     </div>
 </template>
 
 <script>
+    import CountryTimer from "./components/CountryTimer";
     export default {
         name: 'App',
+        components: {CountryTimer},
         data() {
             return {
-                beginnig: new Date("2020-03-17T12:00").getTime(),
-                days: null,
-                hours: null,
-                minutes: null,
-                seconds: null,
+                countries: [
+                    {
+                        name: 'France',
+                        tag: 'france',
+                        beginnig: new Date("2020-03-17T12:00").getTime(),
+                    }
+                ]
             }
         },
-        methods: {
-            franceSpent() {
-
-                requestAnimationFrame(this.franceSpent)
-
-                const now = new Date().getTime()
-
-                const distance = now - this.beginnig
-
-                // Time calculations for days, hours, minutes and seconds
-                this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) + 1); // fix summer hour changing
-                this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            }
-        },
-        mounted() {
-            this.franceSpent()
-        }
     }
 </script>
 
@@ -49,7 +40,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        min-height: 100vh;
         font-family: Avenir, Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
