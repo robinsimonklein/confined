@@ -23,7 +23,6 @@
     export default {
         name: "CountryTimer",
         props: {
-            name: String,
             flag: String,
             beginning: Object,
         },
@@ -112,7 +111,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         font-weight: bold;
     }
 

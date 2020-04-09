@@ -16,14 +16,14 @@
         >
             <CountryTimer
                     :key="key"
-                    :name="country.name"
                     :flag="country.flag"
-                    :text="country.text"
                     :beginning="country.beginning"
             />
             <hr :key="key" v-if="index < countries.length - 1" />
 
         </template>
+
+        <p>{{ $t('last_update') }} : {{ lastUpdate.format("DD/MM/YYYY") }}</p>
     </div>
 </template>
 
@@ -31,6 +31,8 @@
     // @ is an alias to /src
 
     import CountryTimer from "../components/CountryTimer";
+    import dayjs from 'dayjs'
+
     export default {
         name: 'Home',
         components: {
@@ -38,9 +40,9 @@
         },
         data() {
             return {
+                lastUpdate: dayjs('2020-04-09'),
                 countries: [
                     {
-                        name: 'France',
                         flag: 'france',
                         beginning: {
                             date: "2020-03-17",
@@ -48,7 +50,6 @@
                         },
                     },
                     {
-                        name: 'Italie',
                         flag: 'italy',
                         beginning: {
                             date: "2020-03-09",
@@ -56,13 +57,111 @@
                         },
                     },
                     {
-                        name: 'Espagne',
+                        flag: 'germany',
+                        beginning: {
+                            date: "2020-03-22",
+                            time: "00:00"
+                        },
+                    },
+                    {
                         flag: 'spain',
                         beginning: {
                             date: "2020-03-15",
                             time: "00:00"
                         },
-                    }
+                    },
+                    {
+                        flag: 'belgium',
+                        beginning: {
+                            date: "2020-03-18",
+                            time: "12:00"
+                        },
+                    },
+                    {
+                        flag: 'united_kingdom',
+                        beginning: {
+                            date: "2020-03-23",
+                            time: "00:00"
+                        },
+                    },
+                    {
+                        flag: 'austria',
+                        beginning: {
+                            date: "2020-03-15",
+                            time: "00:00"
+                        },
+                    },
+                    {
+                        flag: 'denmark',
+                        beginning: {
+                            date: "2020-03-16",
+                            time: "00:00"
+                        },
+                    },
+                    {
+                        flag: 'finland',
+                        beginning: {
+                            date: "2020-03-16",
+                            time: "00:00"
+                        },
+                    },
+                    {
+                        flag: 'ireland',
+                        beginning: {
+                            date: "2020-03-27",
+                            time: "00:00"
+                        },
+                    },
+                    {
+                        flag: 'czech_republic',
+                        beginning: {
+                            date: "2020-03-16",
+                            time: "00:00"
+                        },
+                    },
+                    {
+                        flag: 'hungary',
+                        beginning: {
+                            date: "2020-03-28",
+                            time: "00:00"
+                        },
+                    },
+                    {
+                        flag: 'romania',
+                        beginning: {
+                            date: "2020-03-25",
+                            time: "00:00"
+                        },
+                    },
+                    {
+                        flag: 'croatia',
+                        beginning: {
+                            date: "2020-03-18",
+                            time: "00:00"
+                        },
+                    },
+                    {
+                        flag: 'greece',
+                        beginning: {
+                            date: "2020-03-23",
+                            time: "00:00"
+                        },
+                    },
+                    {
+                        flag: 'china',
+                        beginning: {
+                            date: "2020-01-22",
+                            time: "00:00"
+                        },
+                    },
+                    {
+                        flag: 'new_zealand',
+                        beginning: {
+                            date: "2020-03-26",
+                            time: "00:00"
+                        },
+                    },
+
                 ]
             }
         },
