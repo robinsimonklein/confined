@@ -64,17 +64,21 @@
 
 <style lang="scss" scoped>
 .timer {
-    margin: 8rem 0;
+    margin: 7rem 0;
 
     @media screen and (max-width: 548px) {
-        margin: 4rem 0;
+        margin: 2rem 0;
     }
 
     &__wrap {
         display: inline-flex;
         flex-direction: column;
         padding: 2rem 2rem;
-        background: #001b31
+        background: #001b31;
+
+        @media screen and (max-width: 548px) {
+            width: 100%;
+        }
     }
 
     &__country {
@@ -87,7 +91,7 @@
 
     &__flag {
         height: 2.5rem;
-        margin-bottom: .1rem;
+        margin-bottom: .3rem;
     }
 
     &__text {

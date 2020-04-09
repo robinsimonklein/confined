@@ -7,13 +7,24 @@
     </div>
 </template>
 
+<script>
+    import AppFooter from "./components/AppFooter";
+    export default {
+        components: {AppFooter}
+    }
+</script>
+
 <style lang="scss">
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
     * {
         box-sizing: border-box;
     }
     body {
         margin: 0;
         padding: 0;
+        background: #011627;
+        // color: $primary;
     }
 
     #app {
@@ -22,28 +33,21 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        font-family: Avenir, Helvetica, Arial, sans-serif;
+        font-family: Roboto, Avenir, Helvetica, Arial, sans-serif;
+        font-weight: 300;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #FDFFFC;
-        background: #011627;
     }
 
     main {
         flex: 1;
         width: 100%;
         padding: 0 1rem;
+    }
 
-        @media screen and (max-width: 548px){
-            padding: 0 .2rem;
-        }
+    a {
+        color: white;
     }
 </style>
-
-<script>
-    import AppFooter from "./components/AppFooter";
-    export default {
-        components: {AppFooter}
-    }
-</script>
