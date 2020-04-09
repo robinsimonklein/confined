@@ -1,0 +1,24 @@
+{
+  "intro": {
+    "title": "CONFINED SINCE WHEN&nbsp;?",
+    "subtitle": "For COVID19",
+    "text": "The world is currently experiencing a global pandemic : <a href=\"https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19\" target=\"_blank\">COVID-19</a> disease, caused by <a href=\"https://fr.wikipedia.org/wiki/Coronavirus\" target=\"_blank\">Coronavirus</a>. To stop the spread of the virus, many countries have set up containment of all their inhabitants.<br/>This site presents a non-exhaustive list of these countries and the length of time since containment has been implemented in them."
+  },
+  "confined_since": "Confined since",
+  "site_data_message": "The data on this site is updated manually and does not guarantee to be exact. It's based on news from around the world.",
+  "date": {
+    "day": "day",
+    "days": "days",
+    "hours": "hours",
+    "hours_letter": "h",
+    "min": "min",
+    "min_letter": "m",
+    "sec": "sec",
+    "sec_letter": "s"
+  },
+  "countries": {
+    "france": "France",
+    "italy": "Italy",
+    "spain": "Spain"
+  }
+}

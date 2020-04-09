@@ -3,13 +3,13 @@
         <div class="timer__wrap">
             <img class="timer__flag" :src="require(`@/assets/flags/${flag}.svg`)" />
             <span class="timer__country">
-                {{ text.in_country }}
+                {{ $t('countries.'+flag) }}
             </span>
-            <span class="timer__day">J. {{ day }}</span>
-            <p class="timer__text">{{ text.since }}</p>
-            <span v-if="largeScreen" class="timer__count">{{ `${spent.days} ${text.days}, ${spent.hours} ${text.hours}, ${spent.minutes} ${text.min}, ${spent.seconds} ${text.sec}` }}</span>
+            <span class="timer__day">{{ $t('date.day') }} {{ day }}</span>
+            <p class="timer__text">{{ $t('confined_since') }}</p>
+            <span v-if="largeScreen" class="timer__count">{{ `${spent.days} ${$t('date.days')}, ${spent.hours} ${$t('date.hours')}, ${spent.minutes} ${$t('date.min')}, ${spent.seconds} ${$t('date.sec')}` }}</span>
             <span v-else class="timer__count">
-                {{ `${spent.days} jours` }}<br>
+                {{ `${spent.days} ${$t('date.days')}` }}<br>
                 {{ `${spent.hours}h ${spent.minutes}m ${spent.seconds}s` }}
             </span>
             <span class="timer__date">({{ beginningDateString }})</span>
@@ -25,7 +25,6 @@
         props: {
             name: String,
             flag: String,
-            text: Object,
             beginning: Object,
         },
         data() {
@@ -132,6 +131,7 @@
         font-size: 2.5rem;
         font-weight: bold;
         margin-bottom: 1rem;
+        text-transform: uppercase;
     }
 
     &__count {

@@ -5,13 +5,9 @@
                 <img src="@/assets/svg/coronavirus.svg" />
             </div>
             <div class="home__intro--text">
-                <h1 class="home__intro--title">DURÉE DE CONFINEMENT</h1>
-                <h2 class="home__intro--subtitle">Pour le COVID19</h2>
-                <p>Le monde connaît actuellement une pandémie planétaire de la maladie <a href="https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19" target="_blank">COVID-19</a>,
-                    causée par le <a href="https://fr.wikipedia.org/wiki/Coronavirus" target="_blank">Coronavirus</a>. Afin de stopper la propagation du virus, de nombreux
-                    pays ont mis en place le confinement de tous leurs habitants.<br/>
-                    Ce site présente une liste non-exhaustive de ces pays ainsi que la durée depuis laquelle le confinement à été mis en place dans ces derniers.
-                </p>
+                <h1 class="home__intro--title" v-html="$t('intro.title')"></h1>
+                <h2 class="home__intro--subtitle">{{ $t('intro.subtitle') }}</h2>
+                <p v-html="$t('intro.text')"></p>
                 <p><strong>#StayAtHome</strong></p>
             </div>
         </div>
@@ -46,14 +42,6 @@
                     {
                         name: 'France',
                         flag: 'france',
-                        text: {
-                            in_country: 'France',
-                            since: 'Confinement depuis',
-                            days: 'jours',
-                            hours: 'heures',
-                            min: 'min.',
-                            sec: 'sec.',
-                        },
                         beginning: {
                             date: "2020-03-17",
                             time: "12:00"
@@ -62,14 +50,6 @@
                     {
                         name: 'Italie',
                         flag: 'italy',
-                        text: {
-                            in_country: 'Italie',
-                            since: 'Confinement depuis',
-                            days: 'jours',
-                            hours: 'heures',
-                            min: 'min.',
-                            sec: 'sec.',
-                        },
                         beginning: {
                             date: "2020-03-09",
                             time: "00:00"
@@ -78,14 +58,6 @@
                     {
                         name: 'Espagne',
                         flag: 'spain',
-                        text: {
-                            in_country: 'Espagne',
-                            since: 'Confinement depuis',
-                            days: 'jours',
-                            hours: 'heures',
-                            min: 'min.',
-                            sec: 'sec.',
-                        },
                         beginning: {
                             date: "2020-03-15",
                             time: "00:00"
