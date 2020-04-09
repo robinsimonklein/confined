@@ -21,6 +21,11 @@ const routes = [
                     trans: true
                 },
                 {
+                    name: 'keywords',
+                    content: 'pages.home.meta.keywords',
+                    trans: true
+                },
+                {
                     property: 'og:url',
                     content: 'pages.home.meta.url',
                     trans: true

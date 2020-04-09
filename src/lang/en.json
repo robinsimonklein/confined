@@ -44,7 +44,8 @@
         "description": "A site that tells you just how long you've been confined. (If you too are not sure anymore)",
         "image": "/confined_cover_en.jpg",
         "locale": "en_UK",
-        "url": "https://confined.netlify.com/en"
+        "url": "https://confined.netlify.com/en",
+        "keywords" : "coronavirus, corona, confinement, quarantaine, covid, covid19, 2020, confinement 2020, combien, jours, heurs, combien de jours confinement, how long confinement, confinement coronavirus, confinement covid, confinenement covid19, confinés, depuis quand confinés, depuis combien de temps confinement, combien de jours confinement, nombre de jours confinement, how many time"
       }
     }
   }
