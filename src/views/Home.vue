@@ -4,7 +4,9 @@
                 v-for="(country, key) in countries"
                 :key="key"
                 :name="country.name"
-                :beginning="country.beginnig"
+                :flag="country.flag"
+                :text="country.text"
+                :beginning="country.beginning"
         />
     </div>
 </template>
@@ -23,8 +25,12 @@
                 countries: [
                     {
                         name: 'France',
-                        tag: 'france',
-                        beginnig: new Date("2020-03-17T12:00").getTime(),
+                        flag: 'france',
+                        text: {
+                            in_country: 'En France',
+                            since: 'Confinés depuis'
+                        },
+                        beginning: new Date("2020-03-17T12:00").getTime(),
                     }
                 ]
             }

@@ -26,13 +26,14 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
-        color: white;
-        background: #2c3e50;
+        color: #FDFFFC;
+        background: #011627;
     }
 
     main {
         flex: 1;
         width: 100%;
+        padding: 0 1rem;
     }
 </style>
 <script>

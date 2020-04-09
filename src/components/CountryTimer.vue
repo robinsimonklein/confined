@@ -1,7 +1,15 @@
 <template>
     <div class="timer">
-        <h1>Confinés depuis</h1>
-        <span>{{ `${spent.days} jours, ${spent.hours} heures, ${spent.minutes} min., ${spent.seconds} sec.` }}</span>
+        <span class="timer__country">
+            <img class="timer__flag" :src="require(`@/assets/flags/${flag}.svg`)" />
+            {{ text.in_country }}
+        </span>
+        <p class="timer__text">{{ text.since }}</p>
+        <span v-if="largeScreen" class="timer__count">{{ `${spent.days} jours, ${spent.hours} heures, ${spent.minutes} min., ${spent.seconds} sec.` }}</span>
+        <span v-else class="timer__count">
+            {{ `${spent.days} jours` }}<br>
+            {{ `${spent.hours}h ${spent.minutes}m ${spent.seconds}s` }}
+        </span>
     </div>
 </template>
 
@@ -10,7 +18,9 @@
         name: "CountryTimer",
         props: {
             name: String,
-            beginning: Number
+            flag: String,
+            text: Object,
+            beginning: Number,
         },
         data() {
             return {
@@ -20,6 +30,11 @@
                     minutes: null,
                     seconds: null,
                 }
+            }
+        },
+        computed: {
+            flagPath() {
+                return ``
             }
         },
         methods: {
@@ -43,6 +58,31 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.timer {
+    margin: 5rem 0;
 
+    &__country {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2.5rem;
+    }
+
+    &__flag {
+        height: 2rem;
+        margin-right: 1rem;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        margin: .5rem 0;
+    }
+
+    &__count {
+        color: #f95850;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
 </style>
