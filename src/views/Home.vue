@@ -28,7 +28,7 @@
 
         </Zone>
         <p>{{ $t('sources') }} : <a href="https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330" target="_blank">TV5MONDE</a>,  <a href="https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19">Wikipédia</a></p>
-        <p>{{ $t('last_update') }} : {{ lastUpdate.format("DD/MM/YYYY") }}</p>
+        <p>{{ $t('last_update') }} : {{ $d(lastUpdate, 'short') }}</p>
     </div>
 </template>
 
@@ -36,7 +36,6 @@
     // @ is an alias to /src
 
     import CountryTimer from "../components/CountryTimer";
-    import dayjs from 'dayjs'
     import Zone from "../components/Zone";
     import ZonesLinks from "../components/ZonesLinks";
 
@@ -49,7 +48,7 @@
         },
         data() {
             return {
-                lastUpdate: dayjs('2020-04-10'),
+                lastUpdate: new Date('2020-04-10'),
                 countries: {
                     europe: [
                         {
