@@ -21,6 +21,8 @@
                     :key="countryKey"
                     :flag="country.flag"
                     :beginning="country.beginning"
+                    :end="country.end || null"
+                    :source="country.source || null"
             />
 
         </Zone>
@@ -53,7 +55,7 @@
                                 date: "2020-03-17",
                                 time: "12:00"
                             },
-                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
+                            source: 'https://fr.wikipedia.org/wiki/Confinement_de_2020_en_France'
                         },
                         {
                             flag: 'italy',
@@ -61,7 +63,7 @@
                                 date: "2020-03-10",
                                 time: "00:00"
                             },
-                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
+                            source: 'https://fr.wikipedia.org/wiki/Confinement_de_2020_en_Italie'
                         },
                         {
                             flag: 'germany',
@@ -69,7 +71,7 @@
                                 date: "2020-03-22",
                                 time: "00:00"
                             },
-                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
+                            source: "https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19_en_Allemagne"
                         },
                         {
                             flag: 'spain',
@@ -77,7 +79,7 @@
                                 date: "2020-03-14",
                                 time: "00:00"
                             },
-                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
+                            source: 'https://fr.wikipedia.org/wiki/Confinement_de_2020_en_Espagne'
                         },
                         {
                             flag: 'belgium',
@@ -85,7 +87,7 @@
                                 date: "2020-03-18",
                                 time: "12:00"
                             },
-                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
+                            source: 'https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19_en_Belgique'
                         },
                         {
                             flag: 'united_kingdom',
@@ -93,7 +95,7 @@
                                 date: "2020-03-23",
                                 time: "00:00"
                             },
-                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
+                            source: 'https://fr.wikipedia.org/wiki/Confinement_de_2020_au_Royaume-Uni'
                         },
                         {
                             flag: 'austria',
@@ -101,7 +103,6 @@
                                 date: "2020-03-16",
                                 time: "00:00"
                             },
-                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
                         },
                         {
                             flag: 'denmark',
@@ -109,7 +110,6 @@
                                 date: "2020-03-11",
                                 time: "00:00"
                             },
-                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
                         },
                         {
                             flag: 'finland',
@@ -171,7 +171,8 @@
                             end: {
                                 date: "2020-04-07",
                                 time: "00:00"
-                            }
+                            },
+                            source: 'https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19_en_Chine'
                         },
                     ],
                     oceania: [

@@ -8,6 +8,7 @@
   "site_data_message": "The data on this site is updated manually and does not guarantee to be exact. It's based on news from around the world.",
   "contribute": "contribute",
   "last_update": "Last update",
+  "source": "Source",
   "sources": "Sources",
   "date": {
     "day": "day",

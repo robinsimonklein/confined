@@ -12,7 +12,11 @@
                 {{ `${spent.days} ${$t('date.days')}` }}<br>
                 {{ `${spent.hours}${$t('date.hours_letter')} ${spent.minutes}${$t('date.min_letter')} ${spent.seconds}${$t('date.sec_letter')}` }}
             </span>
-            <span class="timer__date">({{ beginningDateString }})</span>
+            <span class="timer__date">
+                ({{ beginningDateString }})
+                {{ source ? ' • ' : '' }}
+                <a class="timer__source-link" v-if="source" :href="source" target="_blank">{{ $t('source') }}</a>
+            </span>
         </div>
     </div>
 </template>
@@ -25,6 +29,8 @@
         props: {
             flag: String,
             beginning: Object,
+            end: Object,
+            source: String
         },
         data() {
             return {
