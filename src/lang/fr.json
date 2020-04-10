@@ -68,7 +68,7 @@
         "description": "Un site qui vous dit juste depuis combien de temps vous êtes confiné(e) chez vous. (Si vous aussi vous ne savez plus trop)",
         "image": "/confined_cover_fr.jpg",
         "locale": "fr_FR",
-        "url": "https://confined.netlify.com/fr",
+        "url": "https://confines-depuis-quand.com/fr",
         "keywords" : "coronavirus, corona, confinement, quarantaine, covid, covid19, 2020, confinement 2020, combien, jours, heurs, combien de jours confinement, how long confinement, confinement coronavirus, confinement covid, confinenement covid19, confinés, depuis quand confinés, depuis combien de temps confinement, combien de jours confinement, nombre de jours confinement"
       }
     }
