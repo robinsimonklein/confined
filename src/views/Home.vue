@@ -172,6 +172,7 @@
                                 date: "2020-04-07",
                                 time: "00:00"
                             },
+                            message: 'deconfinement',
                             source: 'https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19_en_Chine'
                         },
                     ],

@@ -1,22 +1,30 @@
 <template>
-    <div class="timer">
+    <div class="timer" :class="{'ended' : end}">
         <div class="timer__wrap">
             <img class="timer__flag" :src="require(`@/assets/flags/${flag}.svg`)" />
             <span class="timer__country">
                 {{ $t('countries.'+flag) }}
             </span>
-            <span class="timer__day">{{ $t('date.day') }} {{ day }}</span>
-            <p class="timer__text">{{ $t('confined_since') }}</p>
-            <span v-if="largeScreen" class="timer__count">{{ `${spent.days} ${$t('date.days')}, ${spent.hours} ${$t('date.hours')}, ${spent.minutes} ${$t('date.min')}, ${spent.seconds} ${$t('date.sec')}` }}</span>
-            <span v-else class="timer__count">
-                {{ `${spent.days} ${$t('date.days')}` }}<br>
-                {{ `${spent.hours}${$t('date.hours_letter')} ${spent.minutes}${$t('date.min_letter')} ${spent.seconds}${$t('date.sec_letter')}` }}
-            </span>
-            <span class="timer__date">
-                ({{ beginningDateString }})
-                {{ source ? ' • ' : '' }}
+            <p>{{ $t('confinement_end_text') }}</p>
+            <p v-if="message" class="timer__message">{{ $t(message) }}</p>
+            <template v-if="end">
+                <span class="timer__day">{{ spent.days }} {{ $t('date.days') }} </span>
                 <a class="timer__source-link" v-if="source" :href="source" target="_blank">{{ $t('source') }}</a>
-            </span>
+            </template>
+            <template v-else>
+                <span class="timer__day">{{ $t('date.day') }} {{ day }}</span>
+                <p class="timer__text">{{ $t('confined_since') }}</p>
+                <span v-if="largeScreen" class="timer__count">{{ `${spent.days} ${$t('date.days')}, ${spent.hours} ${$t('date.hours')}, ${spent.minutes} ${$t('date.min')}, ${spent.seconds} ${$t('date.sec')}` }}</span>
+                <span v-else class="timer__count">
+                    {{ `${spent.days} ${$t('date.days')}` }}<br>
+                    {{ `${spent.hours}${$t('date.hours_letter')} ${spent.minutes}${$t('date.min_letter')} ${spent.seconds}${$t('date.sec_letter')}` }}
+                </span>
+                <span class="timer__date">
+                    ({{ $d(new  Date(beginning.date+'T'+beginning.time), beginning.time !== "00:00" ? 'long' : 'short') }})
+                    {{ source ? ' • ' : '' }}
+                    <a class="timer__source-link" v-if="source" :href="source" target="_blank">{{ $t('source') }}</a>
+                </span>
+            </template>
         </div>
     </div>
 </template>
@@ -29,8 +37,15 @@
         props: {
             flag: String,
             beginning: Object,
-            end: Object,
-            source: String
+            end: {
+                type: Object,
+                default: null
+            },
+            source: String,
+            message: {
+                type: String,
+                default: null
+            },
         },
         data() {
             return {
@@ -137,6 +152,10 @@
         font-weight: bold;
         margin-bottom: 1rem;
         text-transform: uppercase;
+
+        .ended & {
+            color: #7fcd91;
+        }
     }
 
     &__count {

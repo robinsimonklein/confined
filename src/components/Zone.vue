@@ -1,5 +1,5 @@
 <template>
-    <div class="zone">
+    <div class="zone" :id="name">
         <h3 class="zone__name">{{ $t('zones.'+name) }}</h3>
         <slot></slot>
     </div>
