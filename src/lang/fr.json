@@ -8,6 +8,7 @@
   "site_data_message": "Les données de ce site sont mises à jour manuellement et ne garantissent pas d'être exactes. Elles sont basées sur les actualités dans le monde.",
   "contribute": "contribuer",
   "last_update": "Dernière actualisation",
+  "sources": "Sources",
   "date": {
     "day": "jour",
     "days": "jours",
@@ -36,6 +37,15 @@
     "ireland": "Irlande",
     "finland": "Finlande",
     "new_zealand": "Nouvelle Zélande"
+  },
+  "zones": {
+    "europe": "Europe",
+    "asia": "Asie",
+    "oceania": "Océanie",
+    "north_america": "Amérique du Nord",
+    "south_america": "Amérique du Sud",
+    "africa": "Afrique",
+    "others": "Autres"
   },
   "pages": {
     "home": {

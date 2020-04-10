@@ -11,18 +11,20 @@
                 <p><strong>#StayAtHome</strong></p>
             </div>
         </div>
-        <template
-                v-for="(country, index, key) in countries"
+        <Zone
+                v-for="(zone, zoneKey) in countries"
+                :key="zoneKey"
+                :name="zoneKey"
         >
             <CountryTimer
-                    :key="key"
+                    v-for="(country, countryKey) in zone"
+                    :key="countryKey"
                     :flag="country.flag"
                     :beginning="country.beginning"
             />
-            <hr :key="key" v-if="index < countries.length - 1" />
 
-        </template>
-
+        </Zone>
+        <p>{{ $t('sources') }} : <a href="https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330" target="_blank">TV5MONDE</a>,  <a href="https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19">Wikipédia</a></p>
         <p>{{ $t('last_update') }} : {{ lastUpdate.format("DD/MM/YYYY") }}</p>
     </div>
 </template>
@@ -32,137 +34,156 @@
 
     import CountryTimer from "../components/CountryTimer";
     import dayjs from 'dayjs'
+    import Zone from "../components/Zone";
 
     export default {
         name: 'Home',
         components: {
+            Zone,
             CountryTimer
         },
         data() {
             return {
-                lastUpdate: dayjs('2020-04-09'),
-                countries: [
-                    {
-                        flag: 'france',
-                        beginning: {
-                            date: "2020-03-17",
-                            time: "12:00"
+                lastUpdate: dayjs('2020-04-10'),
+                countries: {
+                    europe: [
+                        {
+                            flag: 'france',
+                            beginning: {
+                                date: "2020-03-17",
+                                time: "12:00"
+                            },
+                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
                         },
-                    },
-                    {
-                        flag: 'italy',
-                        beginning: {
-                            date: "2020-03-09",
-                            time: "00:00"
+                        {
+                            flag: 'italy',
+                            beginning: {
+                                date: "2020-03-10",
+                                time: "00:00"
+                            },
+                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
                         },
-                    },
-                    {
-                        flag: 'germany',
-                        beginning: {
-                            date: "2020-03-22",
-                            time: "00:00"
+                        {
+                            flag: 'germany',
+                            beginning: {
+                                date: "2020-03-22",
+                                time: "00:00"
+                            },
+                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
                         },
-                    },
-                    {
-                        flag: 'spain',
-                        beginning: {
-                            date: "2020-03-15",
-                            time: "00:00"
+                        {
+                            flag: 'spain',
+                            beginning: {
+                                date: "2020-03-14",
+                                time: "00:00"
+                            },
+                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
                         },
-                    },
-                    {
-                        flag: 'belgium',
-                        beginning: {
-                            date: "2020-03-18",
-                            time: "12:00"
+                        {
+                            flag: 'belgium',
+                            beginning: {
+                                date: "2020-03-18",
+                                time: "12:00"
+                            },
+                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
                         },
-                    },
-                    {
-                        flag: 'united_kingdom',
-                        beginning: {
-                            date: "2020-03-23",
-                            time: "00:00"
+                        {
+                            flag: 'united_kingdom',
+                            beginning: {
+                                date: "2020-03-23",
+                                time: "00:00"
+                            },
+                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
                         },
-                    },
-                    {
-                        flag: 'austria',
-                        beginning: {
-                            date: "2020-03-15",
-                            time: "00:00"
+                        {
+                            flag: 'austria',
+                            beginning: {
+                                date: "2020-03-16",
+                                time: "00:00"
+                            },
+                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
                         },
-                    },
-                    {
-                        flag: 'denmark',
-                        beginning: {
-                            date: "2020-03-16",
-                            time: "00:00"
+                        {
+                            flag: 'denmark',
+                            beginning: {
+                                date: "2020-03-11",
+                                time: "00:00"
+                            },
+                            source: 'https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330?amp'
                         },
-                    },
-                    {
-                        flag: 'finland',
-                        beginning: {
-                            date: "2020-03-16",
-                            time: "00:00"
+                        {
+                            flag: 'finland',
+                            beginning: {
+                                date: "2020-03-16",
+                                time: "00:00"
+                            },
                         },
-                    },
-                    {
-                        flag: 'ireland',
-                        beginning: {
-                            date: "2020-03-27",
-                            time: "00:00"
+                        {
+                            flag: 'ireland',
+                            beginning: {
+                                date: "2020-03-28",
+                                time: "00:00"
+                            },
                         },
-                    },
-                    {
-                        flag: 'czech_republic',
-                        beginning: {
-                            date: "2020-03-16",
-                            time: "00:00"
+                        {
+                            flag: 'czech_republic',
+                            beginning: {
+                                date: "2020-03-16",
+                                time: "00:00"
+                            },
                         },
-                    },
-                    {
-                        flag: 'hungary',
-                        beginning: {
-                            date: "2020-03-28",
-                            time: "00:00"
+                        {
+                            flag: 'hungary',
+                            beginning: {
+                                date: "2020-03-28",
+                                time: "00:00"
+                            },
                         },
-                    },
-                    {
-                        flag: 'romania',
-                        beginning: {
-                            date: "2020-03-25",
-                            time: "00:00"
+                        {
+                            flag: 'romania',
+                            beginning: {
+                                date: "2020-03-25",
+                                time: "00:00"
+                            },
                         },
-                    },
-                    {
-                        flag: 'croatia',
-                        beginning: {
-                            date: "2020-03-18",
-                            time: "00:00"
+                        {
+                            flag: 'croatia',
+                            beginning: {
+                                date: "2020-03-18",
+                                time: "00:00"
+                            },
                         },
-                    },
-                    {
-                        flag: 'greece',
-                        beginning: {
-                            date: "2020-03-23",
-                            time: "00:00"
+                        {
+                            flag: 'greece',
+                            beginning: {
+                                date: "2020-03-23",
+                                time: "00:00"
+                            },
                         },
-                    },
-                    {
-                        flag: 'china',
-                        beginning: {
-                            date: "2020-01-22",
-                            time: "00:00"
+                    ],
+                    asia: [
+                        {
+                            flag: 'china',
+                            beginning: {
+                                date: "2020-01-22",
+                                time: "00:00"
+                            },
+                            end: {
+                                date: "2020-04-07",
+                                time: "00:00"
+                            }
                         },
-                    },
-                    {
-                        flag: 'new_zealand',
-                        beginning: {
-                            date: "2020-03-26",
-                            time: "00:00"
+                    ],
+                    oceania: [
+                        {
+                            flag: 'new_zealand',
+                            beginning: {
+                                date: "2020-03-26",
+                                time: "00:00"
+                            },
                         },
-                    },
-
-                ]
+                    ]
+                }
             }
         },
     }
