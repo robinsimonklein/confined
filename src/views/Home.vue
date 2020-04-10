@@ -108,6 +108,13 @@
                             },
                         },
                         {
+                            flag: 'switzerland',
+                            beginning: {
+                                date: "2020-03-20",
+                                time: "00:00"
+                            },
+                        },
+                        {
                             flag: 'denmark',
                             beginning: {
                                 date: "2020-03-11",
@@ -134,6 +141,21 @@
                                 date: "2020-03-16",
                                 time: "00:00"
                             },
+                        },
+                        {
+                            flag: 'bulgaria',
+                            beginning: {
+                                date: "2020-03-17",
+                                time: "00:00"
+                            },
+                        },
+                        {
+                            flag: 'republic_of_poland',
+                            beginning: {
+                                date: "2020-03-16",
+                                time: "00:00"
+                            },
+                            source: 'https://lepetitjournal.com/varsovie/actualites/coronavirus-en-pologne-durcissement-du-confinement-depuis-mercredi-277197'
                         },
                         {
                             flag: 'hungary',
@@ -177,6 +199,76 @@
                             },
                             message: 'deconfinement',
                             source: 'https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19_en_Chine'
+                        },
+                        {
+                            flag: 'russia',
+                            beginning: {
+                                date: "2020-03-30",
+                                time: "00:00"
+                            },
+                        },
+                        {
+                            flag: 'india',
+                            beginning: {
+                                date: "2020-03-24",
+                                time: "00:00"
+                            },
+                        },
+                    ],
+                    north_america: [
+                        {
+                            flag: 'canada',
+                            beginning: {
+                                date: "2020-03-23",
+                                time: "00:00"
+                            },
+                            source: 'https://ici.radio-canada.ca/nouvelle/1691229/pause-prolongation-quebec-13-avril-coronavirus'
+                        },
+                        {
+                            flag: 'usa',
+                            beginning: {
+                                date: "2020-03-19",
+                                time: "00:00"
+                            },
+                        },
+                    ],
+                    south_america: [
+                        {
+                            flag: 'brazil',
+                            beginning: {
+                                date: "2020-03-24",
+                                time: "00:00"
+                            },
+                            source: 'https://www.rappler.com/world/regions/latin-america/255439-bolivia-total-lockdown-coronavirus-march-22-2020'
+                        },
+                        {
+                            flag: 'bolivia',
+                            beginning: {
+                                date: "2020-03-22",
+                                time: "00:00"
+                            },
+                            source: 'https://www.rappler.com/world/regions/latin-america/255439-bolivia-total-lockdown-coronavirus-march-22-2020'
+                        },
+                        {
+                            flag: 'colombia',
+                            beginning: {
+                                date: "2020-03-25",
+                                time: "00:00"
+                            },
+                        },
+                        {
+                            flag: 'argentina',
+                            beginning: {
+                                date: "2020-03-19",
+                                time: "00:00"
+                            },
+                        },
+                        {
+                            flag: 'venezuela',
+                            beginning: {
+                                date: "2020-03-17",
+                                time: "00:00"
+                            },
                         },
                     ],
                     oceania: [

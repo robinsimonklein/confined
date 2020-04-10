@@ -38,7 +38,19 @@
     "czech_republic": "Czech Republic",
     "ireland": "Ireland",
     "finland": "Finland",
-    "new_zealand": "New Zealand"
+    "new_zealand": "New Zealand",
+    "bulgaria": "Bulgaria",
+    "republic_of_poland": "Poland",
+    "russia": "Russia",
+    "india": "India",
+    "canada": "Canada",
+    "usa": "U.S.A.",
+    "brazil": "Brazil",
+    "bolivia": "Bolivia",
+    "colombia": "Colombia",
+    "argentina": "Argentina",
+    "venezuela": "Venezuela",
+    "switzerland": "Switzerland"
   },
   "zones": {
     "europe": "Europe",
