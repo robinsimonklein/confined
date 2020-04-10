@@ -1,5 +1,12 @@
-# Confined
+# CONFINED
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3dcd2254-6385-4583-af32-020848a896d6/deploy-status)](https://app.netlify.com/sites/confined/deploys)
+
+
+[CONFINED](https://confined.netlify.com) is a personal initiative whose goal is simply show out how long the world's population has been confined. It was created in the context of the global COVID19 epidemic of 2019-20.
+
+## Sources : 
+- [Wikipedia](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic)
+- [TV5MONDE](https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330)
 
 ## Project setup
 ```
@@ -16,15 +23,3 @@ yarn run serve
 yarn run build
 ```
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
