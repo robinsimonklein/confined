@@ -7,6 +7,9 @@ const dateTimeFormats = {
         short: {
             year: 'numeric', month: 'short', day: 'numeric'
         },
+        medium: {
+            year: 'numeric', month: 'long', day: 'numeric'
+        },
         long: {
             year: 'numeric', month: 'short', day: 'numeric',
             hour: 'numeric', minute: 'numeric', hour12: true
@@ -15,6 +18,9 @@ const dateTimeFormats = {
     'fr': {
         short: {
             year: 'numeric', month: 'short', day: 'numeric'
+        },
+        medium: {
+            year: 'numeric', month: 'long', day: 'numeric'
         },
         long: {
             year: 'numeric', month: 'short', day: 'numeric',

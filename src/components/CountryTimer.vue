@@ -5,10 +5,10 @@
             <span class="timer__country">
                 {{ $t('countries.'+flag) }}
             </span>
-            <p>{{ $t('confinement_end_text') }}</p>
             <p v-if="message" class="timer__message">{{ $t(message) }}</p>
             <template v-if="end">
                 <span class="timer__day">{{ spent.days }} {{ $t('date.days') }} </span>
+                <p>{{ $t('confinement_end_text') }} <strong>{{ $d(new Date(end.date), 'medium') }}.</strong></p>
                 <a class="timer__source-link" v-if="source" :href="source" target="_blank">{{ $t('source') }}</a>
             </template>
             <template v-else>
@@ -62,10 +62,10 @@
         },
         methods: {
             getSpent() {
-                const now = new Date().getTime()
+                const end = this.end !== null ? new Date(this.end.date).getTime() : new Date().getTime()
                 const beginning = new Date(this.beginning.date+'T'+this.beginning.time)
 
-                let distance = now - beginning
+                let distance = end - beginning
 
                 if(beginning < this.summer){
                     distance += 3600000
@@ -101,7 +101,11 @@
             }
         },
         mounted() {
-            this.timer()
+            if(this.end){
+                this.getSpent()
+            }else{
+                this.timer()
+            }
 
             this.resize()
             window.addEventListener('resize', this.resize)
@@ -120,6 +124,8 @@
     &__wrap {
         display: inline-flex;
         flex-direction: column;
+        max-width: 38rem;
+        width: 100%;
         padding: 2rem 2rem;
         background: #001b31;
 
