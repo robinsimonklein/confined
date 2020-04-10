@@ -26,6 +26,7 @@
     "italy": "Italie",
     "germany": "Allemagne",
     "spain": "Espagne",
+    "switzerland": "Suisse",
     "austria": "Autriche",
     "united_kingdom": "Royaume Uni",
     "belgium": "Belgique",
@@ -38,7 +39,18 @@
     "czech_republic": "République Tchèque",
     "ireland": "Irlande",
     "finland": "Finlande",
-    "new_zealand": "Nouvelle Zélande"
+    "new_zealand": "Nouvelle Zélande",
+    "bulgaria": "Bulgare",
+    "republic_of_poland": "Pologne",
+    "russia": "Russie",
+    "india": "Inde",
+    "canada": "Canada",
+    "usa": "U.S.A.",
+    "brazil": "Brésil",
+    "bolivia": "Bolivie",
+    "colombia": "Colombie",
+    "argentina": "Argentine",
+    "venezuela": "Venezuela"
   },
   "zones": {
     "europe": "Europe",

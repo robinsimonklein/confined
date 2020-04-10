@@ -26,6 +26,7 @@
     "italy": "Italy",
     "germany": "Germany",
     "spain": "Spain",
+    "switzerland": "Switzerland",
     "austria": "Austria",
     "united_kingdom": "United Kingdom",
     "belgium": "Belgium",
@@ -49,8 +50,7 @@
     "bolivia": "Bolivia",
     "colombia": "Colombia",
     "argentina": "Argentina",
-    "venezuela": "Venezuela",
-    "switzerland": "Switzerland"
+    "venezuela": "Venezuela"
   },
   "zones": {
     "europe": "Europe",
