@@ -115,7 +115,7 @@
 
 <style lang="scss" scoped>
 .timer {
-    margin: 7rem 0;
+    margin: 4rem 0;
 
     @media screen and (max-width: 548px) {
         margin: 2rem 0;
