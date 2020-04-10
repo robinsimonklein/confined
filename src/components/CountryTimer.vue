@@ -67,9 +67,12 @@
 
                 let distance = end - beginning
 
+                /*
                 if(beginning < this.summer){
                     distance += 3600000
                 }
+
+                 */
 
                 // Time calculations for days, hours, minutes and seconds
                 this.spent.days = Math.floor(distance / (1000 * 60 * 60 * 24));
