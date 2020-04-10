@@ -11,6 +11,7 @@
                 <p><strong>#StayAtHome</strong></p>
             </div>
         </div>
+        <ZonesLinks :countries="countries" />
         <Zone
                 v-for="(zone, zoneKey) in countries"
                 :key="zoneKey"
@@ -37,10 +38,12 @@
     import CountryTimer from "../components/CountryTimer";
     import dayjs from 'dayjs'
     import Zone from "../components/Zone";
+    import ZonesLinks from "../components/ZonesLinks";
 
     export default {
         name: 'Home',
         components: {
+            ZonesLinks,
             Zone,
             CountryTimer
         },
@@ -184,7 +187,7 @@
                                 time: "00:00"
                             },
                         },
-                    ]
+                    ],
                 }
             }
         },
