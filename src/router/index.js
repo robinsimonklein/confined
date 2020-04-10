@@ -55,6 +55,10 @@ const routes = [
                     content: 'pages.home.meta.locale',
                     trans: true
                 },
+                {
+                    name: 'google-site-verification',
+                    content: 'z6xrlxAKI59U5nifxfFq81hJm5LZkwiGYD81HY4FF7k'
+                }
             ],
         },
         children: []
