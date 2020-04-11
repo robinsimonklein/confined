@@ -7,7 +7,9 @@
             </span>
             <p v-if="message" class="timer__message">{{ $t(message) }}</p>
             <template v-if="end">
+                <p class="timer__total">{{ $t('total') }} :</p>
                 <span class="timer__day">{{ spent.days }} {{ $t('date.days') }} </span>
+                <p class="timer__duration">{{ $d(new Date(beginning.date), 'short') }} → {{ $d(new Date(end.date), 'short') }}</p>
                 <p>{{ $t('confinement_end_text') }} <strong>{{ $d(new Date(end.date), 'medium') }}.</strong></p>
                 <a class="timer__source-link" v-if="source" :href="source" target="_blank">{{ $t('source') }}</a>
             </template>
@@ -87,7 +89,7 @@
                 if(!now.isDST && beginning.isDST()){
                     duration.remove(1, 'hours')
                 }
-                
+
                 // Time calculations for days, hours, minutes and seconds
                 this.spent.days = Math.floor(duration.asDays())
                 this.spent.hours = duration.hours()
@@ -174,6 +176,10 @@
         margin-bottom: .3rem;
     }
 
+    &__total {
+        text-transform: capitalize;
+    }
+
     &__text {
         font-size: 1.3rem;
         margin: .4rem 0;
@@ -189,6 +195,12 @@
         .ended & {
             color: #7fcd91;
         }
+    }
+
+    &__duration {
+        margin-top: 0;
+        font-weight: bold;
+        color: #7fcd91;
     }
 
     &__count {

@@ -50,7 +50,7 @@
         },
         data() {
             return {
-                lastUpdate: new Date('2020-04-10'),
+                lastUpdate: new Date('2020-04-11'),
                 countries: {
                     europe: [
                         {
