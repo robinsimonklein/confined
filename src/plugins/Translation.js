@@ -84,8 +84,6 @@ const Trans = {
     },
     setMeta(meta) {
 
-        console.log(meta)
-
         // If a route with a title was found, set the document (page) title to that value.
         if(meta) document.title = i18n.t(meta.title);
 
