@@ -20,7 +20,7 @@
                     {{ `${spent.hours}${$t('date.hours_letter')} ${spent.minutes}${$t('date.min_letter')} ${spent.seconds}${$t('date.sec_letter')}` }}
                 </span>
                 <span class="timer__date">
-                    ({{ $d(new  Date(beginning.date+'T'+beginning.time), beginning.time !== "00:00" ? 'long' : 'short') }})
+                    ({{ $d(beginningDateTZ, beginning.time !== "00:00" ? 'long' : 'short') }})
                     {{ source ? ' • ' : '' }}
                     <a class="timer__source-link" v-if="source" :href="source" target="_blank">{{ $t('source') }}</a>
                 </span>
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-    import dayjs from 'dayjs'
+    import moment from 'moment-timezone'
 
     export default {
         name: "CountryTimer",
@@ -39,6 +39,10 @@
             beginning: Object,
             end: {
                 type: Object,
+                default: null
+            },
+            timezone: {
+                type: String,
                 default: null
             },
             source: String,
@@ -57,28 +61,40 @@
                     seconds: 0,
                 },
                 largeScreen: true,
-                summer: new Date("2020-03-31").getTime()
             }
         },
         methods: {
             getSpent() {
-                const end = this.end !== null ? new Date(this.end.date).getTime() : new Date().getTime()
-                const beginning = new Date(this.beginning.date+'T'+this.beginning.time)
+                let beginning, end, now;
 
-                let distance = end - beginning
+                // set beginning
+                // this.timezone ? beginning = moment.tz(this.beginning.date + 'T' + this.beginning.time, this.timezone) : beginning = moment(this.beginning.date+'T00:00Z').tz(moment.tz.guess())
+                 beginning = moment(this.beginning.date+'T'+this.beginning.time)
+                // set end
+                end = this.end !== null ? moment(this.end.date) : moment().tz(moment.tz.guess())
+                // set now
+                now = moment()
+                const offset = now.utcOffset()
 
-                /*
-                if(beginning < this.summer){
-                    distance += 3600000
+                let duration = moment.duration(end.diff(beginning.tz(moment.tz.guess())))
+
+                // duration.add(offset, 'minutes')
+
+                // manage DST
+                if(now.isDST && !beginning.isDST()){
+                    duration.add(1, 'hours')
                 }
-
-                 */
-
+                if(!now.isDST && beginning.isDST()){
+                    duration.remove(1, 'hours')
+                }
+                
                 // Time calculations for days, hours, minutes and seconds
-                this.spent.days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                this.spent.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // fix summer hour changing
-                this.spent.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                this.spent.seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                this.spent.days = Math.floor(duration.asDays())
+                this.spent.hours = duration.hours()
+                this.spent.minutes = duration.minutes()
+                this.spent.seconds = duration.seconds()
+
+
             },
             getDay() {
                 const now = new Date().getTime()
@@ -99,8 +115,15 @@
             }
         },
         computed: {
-            beginningDateString() {
-                return dayjs(this.beginning.date+'T'+this.beginning.time).format(`D/MM/YYYY${this.beginning.time !== '00:00' ? ' - h:mm' : ''}`)
+            beginningDateTZ() {
+
+                let date;
+                if(this.timezone){
+                    date = moment.tz(this.beginning.date+'T'+this.beginning.time, this.timezone)
+                }else {
+                    date = moment(this.beginning.date+'T'+this.beginning.time+'Z')
+                }
+                return date.tz(moment.tz.guess()).toDate()
             }
         },
         mounted() {
@@ -109,6 +132,7 @@
             }else{
                 this.timer()
             }
+
 
             this.resize()
             window.addEventListener('resize', this.resize)

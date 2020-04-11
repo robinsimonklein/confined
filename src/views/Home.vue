@@ -23,6 +23,7 @@
                     :flag="country.flag"
                     :beginning="country.beginning"
                     :end="country.end || null"
+                    :timezone="country.timezone || null"
                     :source="country.source || null"
             />
 
@@ -38,6 +39,7 @@
     import CountryTimer from "../components/CountryTimer";
     import Zone from "../components/Zone";
     import ZonesLinks from "../components/ZonesLinks";
+    import moment from "moment-timezone";
 
     export default {
         name: 'Home',
@@ -57,6 +59,7 @@
                                 date: "2020-03-17",
                                 time: "12:00"
                             },
+                            timezone: "Europe/Paris",
                             source: 'https://fr.wikipedia.org/wiki/Confinement_de_2020_en_France'
                         },
                         {
@@ -89,6 +92,7 @@
                                 date: "2020-03-18",
                                 time: "12:00"
                             },
+                            timezone: "Europe/Brussels",
                             source: 'https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19_en_Belgique'
                         },
                         {
@@ -282,6 +286,38 @@
                 }
             }
         },
+        created() {
+
+            // const midiChine = moment.tz('2020-03-17T12:00:00', 'Asia/Shanghai')
+            // const midiFrance = moment.tz('2020-04-02T12:00:00', 'Europe/Paris')
+            /*
+            const midiFrance = moment.tz('2020-03-17T12:00:00', 'Europe/Paris')
+            const now = moment()
+
+            let diff = moment.duration(now.diff(midiFrance))
+
+            if(now.isDST && !midiFrance.isDST()){
+                diff.add(1, 'hours')
+            }
+            if(!now.isDST && midiFrance.isDST()){
+                diff.remove(1, 'hours')
+            }
+
+            console.log('nowDST', now)
+            console.log('midiDST', midiFrance.tz('Europe/Paris').format('YYYY-MM-DDTHH:mm:00'))
+            console.log(diff)
+
+            // const midiChineEnFrance = moment.tz('2020-03-17T07:00:00', 'Europe/Paris')
+
+            /*
+            console.log('chine: ', midiChine)
+            console.log('chine: ', midiChine.utc().format('LLLL'))
+            console.log('france: ', midiFrance)
+            console.log('france: ', midiFrance.utc().format('LLLL'))
+            console.log('midi chine en france: ', midiChine.tz('Europe/Paris').format('LLLL'))
+
+             */
+        }
     }
 </script>
 

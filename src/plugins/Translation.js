@@ -1,5 +1,6 @@
 import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE } from '@/constants/trans'
 import { i18n } from '@/plugins/i18n'
+import moment from 'moment-timezone'
 
 const Trans = {
     get defaultLanguage () {
@@ -124,6 +125,7 @@ const Trans = {
         // Routing
         if (!Trans.isLangSupported(lang)) return next(Trans.getUserSupportedLang())
         return Trans.changeLanguage(lang).then(() => {
+            moment.locale(lang)
             Trans.setMeta(to.meta)
             next()
         })
