@@ -26,8 +26,8 @@
                     {{ source ? ' • ' : '' }}
                     <a class="timer__source-link" v-if="source" :href="source" target="_blank">{{ $t('source') }}</a>
                 </span>
-                <hr>
                 <div v-if="estimatedEnd" class="timer__estimated">
+                    <hr>
                     <span class="timer__estimated--top">{{ $t('confinement_estimated')}} :</span>
                     <span class="timer__estimated--date">{{ $d(new Date(estimatedEnd.date), 'short') }}</span>
                 </div>
