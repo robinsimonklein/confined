@@ -51,7 +51,15 @@
     "bolivia": "Bolivia",
     "colombia": "Colombia",
     "argentina": "Argentina",
-    "venezuela": "Venezuela"
+    "venezuela": "Venezuela",
+    "morocco": "Morocco",
+    "algeria": "Algeria",
+    "zimbabwe": "Zimbabwe",
+    "botswana": "Botswana",
+    "nigeria": "Nigeria",
+    "rwanda": "Rwanda",
+    "south_africa": "South Africa",
+    "tunisia": "Tunisia"
   },
   "zones": {
     "europe": "Europe",
