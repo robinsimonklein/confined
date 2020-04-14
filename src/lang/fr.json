@@ -5,6 +5,7 @@
     "text": "Le monde connaît actuellement une pandémie planétaire : la maladie <a href=\"https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19\" target=\"_blank\">COVID-19</a>, causée par le <a href=\"https://fr.wikipedia.org/wiki/Coronavirus\" target=\"_blank\">Coronavirus</a>. Afin de stopper la propagation du virus, de nombreux pays ont mis en place le confinement de leur population.<br/>Ce site présente une liste non-exhaustive de ces pays ainsi que la durée depuis laquelle le confinement à été mis en place dans ces derniers."
   },
   "confined_since": "Confinés depuis",
+  "confinement_estimated" : "Prévu au moins jusqu'au",
   "confinement_end_text": "Le pays a levé le confinement depuis le",
   "total": "total",
   "site_data_message": "Les données de ce site sont mises à jour manuellement et ne garantissent pas d'être exactes. Elles sont basées sur les actualités dans le monde.",

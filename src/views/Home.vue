@@ -22,6 +22,7 @@
                     :key="countryKey"
                     :flag="country.flag"
                     :beginning="country.beginning"
+                    :estimated-end="country.estimatedEnd || null"
                     :end="country.end || null"
                     :timezone="country.timezone || null"
                     :source="country.source || null"

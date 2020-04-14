@@ -26,6 +26,11 @@
                     {{ source ? ' • ' : '' }}
                     <a class="timer__source-link" v-if="source" :href="source" target="_blank">{{ $t('source') }}</a>
                 </span>
+                <hr>
+                <div v-if="estimatedEnd" class="timer__estimated">
+                    <span class="timer__estimated--top">{{ $t('confinement_estimated')}} :</span>
+                    <span class="timer__estimated--date">{{ $d(new Date(estimatedEnd.date), 'short') }}</span>
+                </div>
             </template>
         </div>
     </div>
@@ -39,6 +44,10 @@
         props: {
             flag: String,
             beginning: Object,
+            estimatedEnd: {
+                type: Object,
+                default: null
+            },
             end: {
                 type: Object,
                 default: null
@@ -143,6 +152,15 @@
 </script>
 
 <style lang="scss" scoped>
+    hr {
+        width: 10%;
+        opacity: .2;
+        border: none;
+        background: white;
+        height: 2px;
+        margin: 1.2rem auto
+    }
+
 .timer {
     margin: 4rem 0;
 
@@ -213,6 +231,20 @@
         margin-top: .8rem;
         opacity: .6;
         font-size: .9rem;
+    }
+
+    &__estimated {
+        display: flex;
+        flex-direction: column;
+
+        &--top {
+            font-weight: bold;
+            margin-bottom: .2rem;
+        }
+
+        &--date {
+            color: #7fcd91;
+        }
     }
 }
 </style>
