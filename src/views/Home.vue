@@ -498,7 +498,6 @@
         },
         methods: {
             selectCountryCell(country) {
-                console.log(this.$route.path)
                 this.$router.push({path : this.$route.path, query: { c: country}})
                 this.$store.commit('setLayoutMode', layoutModes.LIST)
             }
