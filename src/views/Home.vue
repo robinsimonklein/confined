@@ -1,36 +1,50 @@
 <template>
-    <div class="home">
-        <div class="home__intro">
-            <div class="home__intro--img">
-                <img src="@/assets/svg/coronavirus.svg" />
+    <div class="home container">
+        <div class="container">
+            <div class="home__intro">
+                <div class="home__intro--img">
+                    <img src="@/assets/svg/coronavirus.svg" />
+                </div>
+                <div class="home__intro--text">
+                    <h1 class="home__intro--title" v-html="$t('intro.title')"></h1>
+                    <h2 class="home__intro--subtitle">{{ $t('intro.subtitle') }}</h2>
+                    <p v-html="$t('intro.text')"></p>
+                    <p><strong>#StayAtHome</strong></p>
+                </div>
             </div>
-            <div class="home__intro--text">
-                <h1 class="home__intro--title" v-html="$t('intro.title')"></h1>
-                <h2 class="home__intro--subtitle">{{ $t('intro.subtitle') }}</h2>
-                <p v-html="$t('intro.text')"></p>
-                <p><strong>#StayAtHome</strong></p>
-            </div>
+            <ZonesLinks :countries="countries" />
+            <Zone
+                    v-for="(zone, zoneKey) in countries"
+                    :key="zoneKey"
+                    :name="zoneKey"
+            >
+                <template v-if="currentLayout === layoutModes.GRID">
+                    <div class="row">
+                        <CountryCell
+                                v-for="(country, countryKey) in zone"
+                                :key="countryKey"
+                                :flag="country.flag"
+                                :beginning="country.beginning"
+                                :end="country.end || null"
+                        />
+                    </div>
+                </template>
+                <template v-else>
+                    <CountryTimer
+                            v-for="(country, countryKey) in zone"
+                            :key="countryKey"
+                            :flag="country.flag"
+                            :beginning="country.beginning"
+                            :estimated-end="country.estimatedEnd || null"
+                            :end="country.end || null"
+                            :timezone="country.timezone || null"
+                            :source="country.source || null"
+                    />
+                </template>
+            </Zone>
+            <p>{{ $t('sources') }} : <a href="https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330" target="_blank">TV5MONDE</a>,  <a href="https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19">Wikipédia</a></p>
+            <p>{{ $t('last_update') }} : {{ $d(lastUpdate, 'short') }}</p>
         </div>
-        <ZonesLinks :countries="countries" />
-        <Zone
-                v-for="(zone, zoneKey) in countries"
-                :key="zoneKey"
-                :name="zoneKey"
-        >
-            <CountryTimer
-                    v-for="(country, countryKey) in zone"
-                    :key="countryKey"
-                    :flag="country.flag"
-                    :beginning="country.beginning"
-                    :estimated-end="country.estimatedEnd || null"
-                    :end="country.end || null"
-                    :timezone="country.timezone || null"
-                    :source="country.source || null"
-            />
-
-        </Zone>
-        <p>{{ $t('sources') }} : <a href="https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330" target="_blank">TV5MONDE</a>,  <a href="https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19">Wikipédia</a></p>
-        <p>{{ $t('last_update') }} : {{ $d(lastUpdate, 'short') }}</p>
     </div>
 </template>
 
@@ -40,11 +54,13 @@
     import CountryTimer from "../components/CountryTimer";
     import Zone from "../components/Zone";
     import ZonesLinks from "../components/ZonesLinks";
-    import moment from "moment-timezone";
+    import layoutModes from '../js/layoutModes';
+    import CountryCell from "../components/CountryCell";
 
     export default {
         name: 'Home',
         components: {
+            CountryCell,
             ZonesLinks,
             Zone,
             CountryTimer
@@ -471,6 +487,14 @@
                 }
             }
         },
+        computed: {
+            currentLayout() {
+                return this.$store.state.layoutMode
+            },
+            layoutModes() {
+                return layoutModes
+            }
+        }
     }
 </script>
 
@@ -488,6 +512,7 @@
     }
 
     .home {
+        margin: auto;
         &__intro {
             display: flex;
             justify-content: center;

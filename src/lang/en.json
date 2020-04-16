@@ -16,6 +16,7 @@
   "date": {
     "day": "day",
     "days": "days",
+    "days_letter": "d",
     "hours": "hours",
     "hours_letter": "h",
     "min": "min",

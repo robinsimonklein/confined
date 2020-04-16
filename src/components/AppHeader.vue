@@ -25,5 +25,6 @@
         align-items: center;
         width: 100%;
         padding: 1rem;
+        background: linear-gradient(180deg, rgba(#011627,1) 10%, rgba(#011627,0) 100%);
     }
 </style>
