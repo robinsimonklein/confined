@@ -378,38 +378,6 @@
                 }
             }
         },
-        created() {
-
-            // const midiChine = moment.tz('2020-03-17T12:00:00', 'Asia/Shanghai')
-            // const midiFrance = moment.tz('2020-04-02T12:00:00', 'Europe/Paris')
-            /*
-            const midiFrance = moment.tz('2020-03-17T12:00:00', 'Europe/Paris')
-            const now = moment()
-
-            let diff = moment.duration(now.diff(midiFrance))
-
-            if(now.isDST && !midiFrance.isDST()){
-                diff.add(1, 'hours')
-            }
-            if(!now.isDST && midiFrance.isDST()){
-                diff.remove(1, 'hours')
-            }
-
-            console.log('nowDST', now)
-            console.log('midiDST', midiFrance.tz('Europe/Paris').format('YYYY-MM-DDTHH:mm:00'))
-            console.log(diff)
-
-            // const midiChineEnFrance = moment.tz('2020-03-17T07:00:00', 'Europe/Paris')
-
-            /*
-            console.log('chine: ', midiChine)
-            console.log('chine: ', midiChine.utc().format('LLLL'))
-            console.log('france: ', midiFrance)
-            console.log('france: ', midiFrance.utc().format('LLLL'))
-            console.log('midi chine en france: ', midiChine.tz('Europe/Paris').format('LLLL'))
-
-             */
-        }
     }
 </script>
 
