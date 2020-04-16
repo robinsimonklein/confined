@@ -137,7 +137,6 @@
                 return date.tz(moment.tz.guess()).toDate()
             },
             displayEstimated(){
-                console.log(moment())
                 return this.estimatedEnd ? moment().isBefore(this.estimatedEnd.date) : false
             },
         },
