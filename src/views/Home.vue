@@ -137,6 +137,11 @@
                                 date: "2020-03-20",
                                 time: "00:00"
                             },
+                            estimatedEnd: {
+                                date: "2020-04-26",
+                                time: "00:00"
+                            },
+                            source: "https://www.swissinfo.ch/fre/societe/pand%C3%A9mie_coronavirus--la-situation-en-suisse/45604062"
                         },
                         {
                             flag: 'denmark',
