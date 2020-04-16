@@ -348,6 +348,17 @@
                             },
                         },
                         {
+                            flag: 'malawi',
+                            beginning: {
+                                date: "2020-04-11",
+                                time: "00:00"
+                            },
+                            estimatedEnd: {
+                                date: "2020-05-09",
+                                time: "00:00"
+                            },
+                        },
+                        {
                             flag: 'south_africa',
                             beginning: {
                                 date: "2020-03-27",
