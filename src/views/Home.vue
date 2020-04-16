@@ -51,7 +51,7 @@
         },
         data() {
             return {
-                lastUpdate: new Date('2020-04-14'),
+                lastUpdate: new Date('2020-04-16'),
                 countries: {
                     europe: [
                         {
@@ -73,6 +73,10 @@
                                 date: "2020-03-10",
                                 time: "00:00"
                             },
+                            estimatedEnd: {
+                                date: "2020-05-03",
+                                time: "00:00"
+                            },
                             source: 'https://fr.wikipedia.org/wiki/Confinement_de_2020_en_Italie'
                         },
                         {
@@ -89,6 +93,10 @@
                                 date: "2020-03-14",
                                 time: "00:00"
                             },
+                            estimatedEnd: {
+                                date: "2020-04-25",
+                                time: "00:00"
+                            },
                             source: 'https://fr.wikipedia.org/wiki/Confinement_de_2020_en_Espagne'
                         },
                         {
@@ -96,6 +104,10 @@
                             beginning: {
                                 date: "2020-03-18",
                                 time: "12:00"
+                            },
+                            estimatedEnd: {
+                                date: "2020-04-05",
+                                time: "00:00"
                             },
                             timezone: "Europe/Brussels",
                             source: 'https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19_en_Belgique'
@@ -114,6 +126,10 @@
                                 date: "2020-03-16",
                                 time: "00:00"
                             },
+                            estimatedEnd: {
+                                date: "2020-04-13",
+                                time: "00:00"
+                            },
                         },
                         {
                             flag: 'switzerland',
@@ -128,11 +144,19 @@
                                 date: "2020-03-11",
                                 time: "00:00"
                             },
+                            estimatedEnd: {
+                                date: "2020-04-13",
+                                time: "00:00"
+                            },
                         },
                         {
                             flag: 'finland',
                             beginning: {
                                 date: "2020-03-16",
+                                time: "00:00"
+                            },
+                            estimatedEnd: {
+                                date: "2020-03-19",
                                 time: "00:00"
                             },
                         },
@@ -142,6 +166,10 @@
                                 date: "2020-03-28",
                                 time: "00:00"
                             },
+                            estimatedEnd: {
+                                date: "2020-04-12",
+                                time: "00:00"
+                            }
                         },
                         {
                             flag: 'czech_republic',
@@ -161,6 +189,10 @@
                             flag: 'republic_of_poland',
                             beginning: {
                                 date: "2020-03-16",
+                                time: "00:00"
+                            },
+                            estimatedEnd: {
+                                date: "2020-04-12",
                                 time: "00:00"
                             },
                             source: 'https://lepetitjournal.com/varsovie/actualites/coronavirus-en-pologne-durcissement-du-confinement-depuis-mercredi-277197'
@@ -193,6 +225,17 @@
                                 time: "00:00"
                             },
                         },
+                        {
+                            flag: 'georgia',
+                            beginning: {
+                                date: "2020-04-15",
+                                time: "00:00"
+                            },
+                            estimatedEnd: {
+                                date: "2020-04-25",
+                                time: "00:00"
+                            },
+                        },
                     ],
                     asia: [
                         {
@@ -219,6 +262,29 @@
                             flag: 'india',
                             beginning: {
                                 date: "2020-03-24",
+                                time: "00:00"
+                            },
+                            estimatedEnd: {
+                                date: "2020-05-03",
+                                time: "00:00"
+                            }
+                        },
+                        {
+                            flag: 'philippines',
+                            beginning: {
+                                date: "2020-03-15",
+                                time: "00:00"
+                            },
+                            estimatedEnd: {
+                                date: "2020-04-30",
+                                time: "00:00"
+                            },
+                            source: "https://en.wikipedia.org/wiki/2020_Luzon_enhanced_community_quarantine"
+                        },
+                        {
+                            flag: 'israel',
+                            beginning: {
+                                date: "2020-03-17",
                                 time: "00:00"
                             },
                         },
@@ -277,6 +343,21 @@
                                 date: "2020-03-17",
                                 time: "00:00"
                             },
+                        },
+                        {
+                            flag: 'peru',
+                            beginning: {
+                                date: "2020-03-16",
+                                time: "00:00"
+                            },
+                        },
+                        {
+                            flag: 'panama',
+                            beginning: {
+                                date: "2020-03-22",
+                                time: "00:00"
+                            },
+                            source: "https://edition.cnn.com/2020/04/01/world/panama-coronavirus-sex-intl/index.html"
                         },
                     ],
                     africa: [
@@ -367,6 +448,13 @@
                         },
                     ],
                     oceania: [
+                        {
+                            flag: 'australia',
+                            beginning: {
+                                date: "2020-03-29",
+                                time: "00:00"
+                            },
+                        },
                         {
                             flag: 'new_zealand',
                             beginning: {
