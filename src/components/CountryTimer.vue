@@ -26,7 +26,7 @@
                     {{ source ? ' • ' : '' }}
                     <a class="timer__source-link" v-if="source" :href="source" target="_blank">{{ $t('source') }}</a>
                 </span>
-                <div v-if="estimatedEnd" class="timer__estimated">
+                <div v-if="estimatedEnd && displayEstimated" class="timer__estimated">
                     <hr>
                     <span class="timer__estimated--top">{{ $t('confinement_estimated')}} :</span>
                     <span class="timer__estimated--date">{{ $d(new Date(estimatedEnd.date), 'short') }}</span>
@@ -135,7 +135,11 @@
                     date = moment(this.beginning.date+'T'+this.beginning.time+'Z')
                 }
                 return date.tz(moment.tz.guess()).toDate()
-            }
+            },
+            displayEstimated(){
+                console.log(moment())
+                return this.estimatedEnd ? moment().isBefore(this.estimatedEnd.date) : false
+            },
         },
         mounted() {
             if(this.end){
