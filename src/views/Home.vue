@@ -43,7 +43,7 @@
                     />
                 </template>
             </Zone>
-            <p>{{ $t('sources') }} : <a href="https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330" target="_blank">TV5MONDE</a>,  <a href="https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19">Wikipédia</a></p>
+            <p>{{ $t('sources') }} : <a href="https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330" target="_blank" rel="noreferrer">TV5MONDE</a>,  <a href="https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19" target="_blank" rel="noreferrer">Wikipédia</a></p>
             <p>{{ $t('last_update') }} : {{ $d(lastUpdate, 'short') }}</p>
         </div>
     </div>

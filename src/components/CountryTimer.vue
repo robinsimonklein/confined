@@ -11,7 +11,7 @@
                 <span class="timer__day">{{ spent.days }} {{ $t('date.days') }} </span>
                 <p class="timer__duration">{{ $d(new Date(beginning.date), 'short') }} → {{ $d(new Date(end.date), 'short') }}</p>
                 <p>{{ $t('confinement_end_text') }} <strong>{{ $d(new Date(end.date), 'medium') }}.</strong></p>
-                <a class="timer__source-link" v-if="source" :href="source" target="_blank">{{ $t('source') }}</a>
+                <a class="timer__source-link" v-if="source" :href="source" target="_blank" rel="noreferrer">{{ $t('source') }}</a>
             </template>
             <template v-else>
                 <span class="timer__day">{{ $t('date.day') }} {{ day }}</span>
