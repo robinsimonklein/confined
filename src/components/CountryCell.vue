@@ -1,18 +1,25 @@
 <template>
     <div class="country-cell__wrap col col-xs-4 col-sm-2">
-        <div class="country-cell">
+        <div :id="flag" class="country-cell" @click="select">
             <img class="country-cell__flag" :src="require(`@/assets/flags/${flag}.svg`)" />
             <span class="country-cell__country">
                 {{ $t('countries.'+flag) }}
             </span>
-            <span v-if="end" class="country-cell__day country-cell__day--spent">{{ spent.days }}</span>
-            <span v-else class="country-cell__day">{{ day }}</span>
+            <template v-if="end">
+                <span v-if="end" class="country-cell__day country-cell__day--spent">{{ spent.days }}</span>
+                <span class="country-cell__day--text">{{ $t('date.days')}}</span>
+            </template>
+            <template v-else>
+                <span class="country-cell__day--text">{{ $t('date.day')}}</span>
+                <span class="country-cell__day">{{ day }}</span>
+            </template>
         </div>
     </div>
 </template>
 
 <script>
     import moment from "moment-timezone";
+    import layoutModes from "../js/layoutModes";
 
     export default {
         name: "CountryCell",
@@ -76,6 +83,9 @@
                 // Time calculations for days, hours, minutes and seconds
                 this.spent.days = Math.floor(duration.asDays())
             },
+            select(){
+                this.$emit('select')
+            }
         },
         beforeMount() {
             if(this.end){
@@ -83,7 +93,7 @@
             }else{
                 this.getDay()
             }
-        }
+        },
     }
 </script>
 
@@ -95,6 +105,7 @@
     background: #001b31;
     height: 100%;
     flex: 1;
+    cursor: pointer;
 
     @media screen and (max-width: 548px) {
         padding: .8rem .2rem
@@ -118,6 +129,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: pre;
+        margin-bottom: 1rem;
 
         @media screen and (max-width: 548px) {
             font-size: .8rem;
@@ -126,8 +138,12 @@
 
     &__day {
         font-weight: bold;
-        text-transform: uppercase;
         font-size: 2rem;
+
+        &--text {
+            color: white;
+            text-transform: capitalize;
+        }
 
         &--spent {
             color: #7fcd91;

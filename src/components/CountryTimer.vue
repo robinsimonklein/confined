@@ -1,5 +1,5 @@
 <template>
-    <div class="timer" :class="{'ended' : end}">
+    <div :ref="flag" class="timer" :class="{'ended' : end}">
         <div class="timer__wrap">
             <img class="timer__flag" :src="require(`@/assets/flags/${flag}.svg`)" />
             <span class="timer__country">
@@ -145,6 +145,10 @@
                 this.getSpent()
             }else{
                 this.timer()
+            }
+
+            if(this.$route.query.c === this.flag){
+                this.$scrollTo(this.$refs[this.flag])
             }
 
 

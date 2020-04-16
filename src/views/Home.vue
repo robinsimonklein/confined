@@ -26,6 +26,7 @@
                                 :flag="country.flag"
                                 :beginning="country.beginning"
                                 :end="country.end || null"
+                                @select="selectCountryCell(country.flag)"
                         />
                     </div>
                 </template>
@@ -494,7 +495,20 @@
             layoutModes() {
                 return layoutModes
             }
+        },
+        methods: {
+            selectCountryCell(country) {
+                console.log(this.$route.path)
+                this.$router.push({path : this.$route.path, query: { c: country}})
+                this.$store.commit('setLayoutMode', layoutModes.LIST)
+            }
+        },
+        beforeCreate() {
+            if(this.$route.query.c){
+                this.$store.commit('setLayoutMode', layoutModes.LIST)
+            }
         }
+
     }
 </script>
 

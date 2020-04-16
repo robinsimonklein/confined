@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        layoutMode: layoutModes.LIST
+        layoutMode: layoutModes.GRID
     },
     getters: {
 

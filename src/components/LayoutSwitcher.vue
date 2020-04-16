@@ -24,13 +24,14 @@
             },
             icons() {
                 let icons = {}
-                icons[layoutModes.LIST] = '<svg class="layout-switcher__icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"><path d="M0 19.52h35V35H0zM0 0h35v15.481H0z"/></svg>'
                 icons[layoutModes.GRID] = '<svg class="layout-switcher__icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"><path d="M0 0h16v16H0zM19 0h16v16H19zM0 19h16v16H0zM19 19h16v16H19z"/></svg>'
+                icons[layoutModes.LIST] = '<svg class="layout-switcher__icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"><path d="M0 19.52h35V35H0zM0 0h35v15.481H0z"/></svg>'
                 return icons
             }
         },
         methods: {
             changeLayoutMode(mode) {
+                this.$router.replace({path: this.$route.path, query: {}})
                 this.$store.commit('setLayoutMode', mode)
             },
         }
@@ -51,12 +52,17 @@
     }
     &__icon {
         fill: #8faabf;
-        height: 1.3rem;
-        width: 1.3rem;
+        height: 1.5rem;
+        width: 1.5rem;
         cursor: pointer;
 
         .selected &{
             fill: white;
+        }
+
+        @media screen and (max-width: 548px) {
+            height: 1.3rem;
+            width: 1.3rem;
         }
     }
 }

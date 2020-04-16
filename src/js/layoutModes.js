@@ -1,4 +1,4 @@
 export default {
-    LIST: 'list',
-    GRID: 'grid'
+    GRID: 'grid',
+    LIST: 'list'
 }
