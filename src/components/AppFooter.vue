@@ -6,7 +6,7 @@
         <div class="footer__links">
             {{ $t('contribute') }} :
             <a class="footer__link" href="https://github.com/robinsimonklein/confined" target="_blank" rel="noreferrer">
-                <img class="footer__link-img" src="@/assets/svg/github.svg">
+                <img class="footer__link-img" src="@/assets/svg/github.svg" alt="logo github">
             </a>
         </div>
     </footer>

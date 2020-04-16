@@ -3,7 +3,7 @@
         <div class="container">
             <div class="home__intro">
                 <div class="home__intro--img">
-                    <img src="@/assets/svg/coronavirus.svg" />
+                    <img src="@/assets/svg/coronavirus.svg" alt="coronavirus" />
                 </div>
                 <div class="home__intro--text">
                     <h1 class="home__intro--title" v-html="$t('intro.title')"></h1>

@@ -1,7 +1,7 @@
 <template>
     <div class="country-cell__wrap col col-xs-4 col-sm-2">
         <div :id="flag" class="country-cell" @click="select">
-            <img class="country-cell__flag" :src="require(`@/assets/flags/${flag}.svg`)" />
+            <img class="country-cell__flag" :src="require(`@/assets/flags/${flag}.svg`)" :alt="flag"/>
             <span class="country-cell__country">
                 {{ $t('countries.'+flag) }}
             </span>
