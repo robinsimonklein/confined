@@ -6,7 +6,7 @@
                     v-for="(zone, key) in countries"
                     :key="key"
             >
-                <a class="zones-links__link" :href="'#'+key">{{ $t(`zones.${key}`) }}</a>
+                <span class="zones-links__link" @click="goTo(key)">{{ $t(`zones.${key}`) }}</span>
             </li>
         </ul>
     </nav>
@@ -17,6 +17,12 @@
         name: "ZonesLinks",
         props: {
             countries: Object
+        },
+        methods: {
+            goTo(zone) {
+                const target = document.getElementById(zone)
+                this.$scrollTo(target)
+            }
         }
     }
 </script>
@@ -41,6 +47,7 @@
         margin: 1rem;
         padding: .6rem .9rem;
         background: #001b31;
+        cursor: pointer;
         border-bottom: 2px solid rgba(#f95850, .5);
 
         @media screen and(max-width: 548px) {
