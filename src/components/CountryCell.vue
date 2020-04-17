@@ -106,15 +106,16 @@
     height: 100%;
     flex: 1;
     cursor: pointer;
-    transition: all .5s ease;
+    border: 1px solid $color-dark-alternate;
+    transition: all .2s ease;
 
     @media screen and (max-width: 548px) {
         padding: .8rem .2rem
     }
 
     &:hover {
-        transition: all .5s ease;
-        box-shadow: 0 0 0.5rem rgba(0,0,0, .2);
+        transition: all .2s ease;
+        border: 1px solid rgba($color-primary, .3);
     }
 
     &__wrap {
