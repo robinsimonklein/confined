@@ -43,8 +43,10 @@
                     />
                 </template>
             </Zone>
-            <p>{{ $t('sources') }} : <a href="https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330" target="_blank" rel="noreferrer">TV5MONDE</a>,  <a href="https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19" target="_blank" rel="noreferrer">Wikipédia</a></p>
-            <p>{{ $t('last_update') }} : {{ $d(lastUpdate, 'short') }}</p>
+            <div class="home__infos">
+                <p>{{ $t('sources') }} : <a href="https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330" target="_blank" rel="noreferrer">TV5MONDE</a>,  <a href="https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19" target="_blank" rel="noreferrer">Wikipédia</a></p>
+                <p>{{ $t('last_update') }} : {{ $d(lastUpdate, 'short') }}</p>
+            </div>
         </div>
     </div>
 </template>
@@ -118,7 +120,9 @@
     }
 
     .home {
+        position: relative;
         margin: auto;
+        padding-bottom: 1rem;
         &__intro {
             display: flex;
             justify-content: center;
@@ -159,6 +163,12 @@
                         width: 6rem;
                     }
                 }
+            }
+        }
+
+        &__infos {
+            @media screen and (max-width: 548px) {
+                margin-top: 2rem;
             }
         }
     }

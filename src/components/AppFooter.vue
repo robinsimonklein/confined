@@ -43,6 +43,7 @@
             @media screen and (max-width: 548px) {
                 max-width: inherit;
                 margin-right: 0;
+                width: 100%;
                 margin-bottom: 2rem;
             }
 

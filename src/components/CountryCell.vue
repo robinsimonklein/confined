@@ -1,12 +1,12 @@
 <template>
-    <div class="country-cell__wrap col col-xs-4 col-sm-2">
+    <div class="country-cell__wrap col col-xs-4 col-sm-2" :class="{'ended' : end}">
         <div :id="flag" class="country-cell" @click="select">
             <img class="country-cell__flag" :src="require(`@/assets/flags/${flag}.svg`)" :alt="flag" importance="low"/>
             <span class="country-cell__country">
                 {{ $t('countries.'+flag) }}
             </span>
             <template v-if="end">
-                <span v-if="end" class="country-cell__day country-cell__day--spent">{{ spent.days }}</span>
+                <span v-if="end" class="country-cell__day">{{ spent.days }}</span>
                 <span class="country-cell__day--text">{{ $t('date.days')}}</span>
             </template>
             <template v-else>
@@ -109,6 +109,10 @@
     border: 1px solid $color-dark-alternate;
     transition: all .2s ease;
 
+    .ended & {
+        background: $color-success-dark;
+    }
+
     @media screen and (max-width: 548px) {
         padding: .8rem .2rem
     }
@@ -157,7 +161,7 @@
             text-transform: capitalize;
         }
 
-        &--spent {
+        .ended & {
             color: #7fcd91;
         }
     }

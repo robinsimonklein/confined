@@ -52,8 +52,8 @@
     }
     &__icon {
         fill: #8faabf;
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 1.6rem;
+        width: 1.6rem;
         cursor: pointer;
 
         .selected &{
@@ -61,8 +61,8 @@
         }
 
         @media screen and (max-width: 548px) {
-            height: 1.3rem;
-            width: 1.3rem;
+            height: 1.5rem;
+            width: 1.5rem;
         }
     }
 }
