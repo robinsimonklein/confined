@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="footer__infos">
             <p v-html="$t('site_data_message')"></p>
-            <p id="asterisk-1">* {{ $t('asterisk_1') }}</p>
+            <p id="asterisk-1"><sup>1</sup> {{ $t('asterisk_1') }}</p>
         </div>
         <div class="footer__links">
             {{ $t('contribute') }} :
