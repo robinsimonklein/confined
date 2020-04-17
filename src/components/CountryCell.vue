@@ -145,7 +145,12 @@
 
     &__day {
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 2.5rem;
+
+
+        @media screen and (max-width: 548px) {
+            font-size: 2rem;
+        }
 
         &--text {
             color: white;
