@@ -83,7 +83,36 @@ const africa = [
             date: "2020-03-27",
             time: "00:00"
         },
-    }
+        estimatedEnd: {
+            date: "2020-04-30",
+            time: "00:00"
+        },
+        source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_South_Africa"
+    },
+    {
+        flag: 'madagascar',
+        beginning: {
+            date: "2020-03-22",
+            time: "00:00"
+        },
+        estimatedEnd: {
+            date: "2020-04-19",
+            time: "00:00"
+        },
+        source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Mauritius"
+    },
+    {
+        flag: 'mauritius',
+        beginning: {
+            date: "2020-03-23",
+            time: "00:00"
+        },
+        estimatedEnd: {
+            date: "2020-05-04",
+            time: "00:00"
+        },
+        source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Mauritius"
+    },
 ]
 
 export default africa

@@ -6,7 +6,7 @@ const asia = [
             time: "00:00"
         },
         end: {
-            date: "2020-04-07",
+            date: "2020-04-08",
             time: "00:00"
         },
         message: 'deconfinement',

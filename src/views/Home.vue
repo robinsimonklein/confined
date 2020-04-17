@@ -69,7 +69,7 @@
         },
         data() {
             return {
-                lastUpdate: new Date('2020-04-16'),
+                lastUpdate: new Date('2020-04-17'),
                 zones: zones,
                 countries: {}
             }

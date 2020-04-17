@@ -51,7 +51,7 @@ const europe = [
             time: "12:00"
         },
         estimatedEnd: {
-            date: "2020-04-05",
+            date: "2020-05-03",
             time: "00:00"
         },
         timezone: "Europe/Brussels",
@@ -63,7 +63,11 @@ const europe = [
             date: "2020-03-23",
             time: "00:00"
         },
-        source: 'https://fr.wikipedia.org/wiki/Confinement_de_2020_au_Royaume-Uni'
+        estimatedEnd: {
+            date: "2020-05-07",
+            time: "00:00"
+        },
+        source: 'https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_the_United_Kingdom'
     },
     {
         flag: 'austria',
@@ -83,7 +87,7 @@ const europe = [
             time: "00:00"
         },
         estimatedEnd: {
-            date: "2020-04-26",
+            date: "2020-04-27",
             time: "00:00"
         },
         source: "https://www.swissinfo.ch/fre/societe/pand%C3%A9mie_coronavirus--la-situation-en-suisse/45604062"
@@ -106,7 +110,7 @@ const europe = [
             time: "00:00"
         },
         estimatedEnd: {
-            date: "2020-03-19",
+            date: "2020-04-13",
             time: "00:00"
         },
     },
@@ -117,9 +121,10 @@ const europe = [
             time: "00:00"
         },
         estimatedEnd: {
-            date: "2020-04-12",
+            date: "2020-05-09",
             time: "00:00"
-        }
+        },
+        source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_the_United_Kingdom"
     },
     {
         flag: 'czech_republic',
@@ -136,13 +141,13 @@ const europe = [
         },
     },
     {
-        flag: 'republic_of_poland',
+        flag: 'poland',
         beginning: {
             date: "2020-03-16",
             time: "00:00"
         },
         estimatedEnd: {
-            date: "2020-04-12",
+            date: "2020-04-19",
             time: "00:00"
         },
         source: 'https://lepetitjournal.com/varsovie/actualites/coronavirus-en-pologne-durcissement-du-confinement-depuis-mercredi-277197'

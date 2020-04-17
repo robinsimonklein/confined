@@ -52,3 +52,5 @@ const south_america = [
         source: "https://edition.cnn.com/2020/04/01/world/panama-coronavirus-sex-intl/index.html"
     }
 ]
+
+export default south_america
