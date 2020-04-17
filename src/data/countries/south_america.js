@@ -50,6 +50,14 @@ const south_america = [
             time: "00:00"
         },
         source: "https://edition.cnn.com/2020/04/01/world/panama-coronavirus-sex-intl/index.html"
+    },
+    {
+        flag: 'ecuador',
+        beginning: {
+            date: "2020-03-18",
+            time: "00:00"
+        },
+        source: "https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/equateur/"
     }
 ]
 

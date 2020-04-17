@@ -48,6 +48,41 @@ const asia = [
             date: "2020-03-17",
             time: "00:00"
         },
+    },
+    {
+        flag: 'iraq',
+        beginning: {
+            date: "2020-03-17",
+            time: "00:00"
+        },
+        end: {
+            date: "2020-04-11",
+            time: "00:00"
+        }
+    },
+    {
+        flag: 'saudi_arabia',
+        beginning: {
+            date: "2020-03-26",
+            time: "00:00"
+        },
+        estimatedEnd: {
+            date: "2020-04-13",
+            time: "00:00"
+        },
+        source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Saudi_Arabia"
+    },
+    {
+        flag: 'lebanon',
+        beginning: {
+            date: "2020-03-15",
+            time: "00:00"
+        },
+        estimatedEnd: {
+            date: "2020-04-26",
+            time: "00:00"
+        },
+        source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Lebanon"
     }
 ]
 

@@ -110,7 +110,7 @@ const europe = [
             time: "00:00"
         },
         estimatedEnd: {
-            date: "2020-04-13",
+            date: "2020-04-19",
             time: "00:00"
         },
     },
@@ -187,7 +187,7 @@ const europe = [
             time: "00:00"
         },
         estimatedEnd: {
-            date: "2020-04-25",
+            date: "2020-05-10",
             time: "00:00"
         },
     }
