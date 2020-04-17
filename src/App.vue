@@ -3,6 +3,7 @@
         <AppHeader />
         <main>
             <router-view/>
+            <ScrollToTop />
         </main>
         <AppFooter />
     </div>
@@ -11,9 +12,10 @@
 <script>
     import AppFooter from "./components/AppFooter";
     import AppHeader from "./components/AppHeader";
+    import ScrollToTop from "./components/ScrollToTop";
 
     export default {
-        components: {AppHeader, AppFooter},
+        components: {ScrollToTop, AppHeader, AppFooter},
     }
 </script>
 
@@ -42,6 +44,7 @@
     }
 
     main {
+        position: relative;
         flex: 1;
         width: 100%;
         padding: 0 1rem;
