@@ -38,7 +38,8 @@
             margin-right: 2rem;
             font-size: .9rem;
             color: #8faabf;
-            max-width: 50%;
+            width: 50%;
+            max-width: 40rem;
 
             @media screen and (max-width: 548px) {
                 max-width: inherit;
@@ -47,7 +48,7 @@
             }
 
             p {
-                margin: 0;
+                margin: .4rem 0;
             }
         }
 
