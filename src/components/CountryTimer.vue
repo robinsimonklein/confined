@@ -1,7 +1,7 @@
 <template>
     <div :ref="flag" class="timer" :class="{'ended' : end}">
         <div class="timer__wrap">
-            <img class="timer__flag" :src="require(`@/assets/flags/${flag}.svg`)" :alt="flag" />
+            <img class="timer__flag" :src="require(`@/assets/flags/${flag}.svg`)" :alt="flag" importance="low"/>
             <span class="timer__country">
                 {{ $t('countries.'+flag) }}
             </span>

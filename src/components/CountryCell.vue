@@ -1,7 +1,7 @@
 <template>
     <div class="country-cell__wrap col col-xs-4 col-sm-2">
         <div :id="flag" class="country-cell" @click="select">
-            <img class="country-cell__flag" :src="require(`@/assets/flags/${flag}.svg`)" :alt="flag"/>
+            <img class="country-cell__flag" :src="require(`@/assets/flags/${flag}.svg`)" :alt="flag" importance="low"/>
             <span class="country-cell__country">
                 {{ $t('countries.'+flag) }}
             </span>
@@ -106,9 +106,15 @@
     height: 100%;
     flex: 1;
     cursor: pointer;
+    transition: all .5s ease;
 
     @media screen and (max-width: 548px) {
         padding: .8rem .2rem
+    }
+
+    &:hover {
+        transition: all .5s ease;
+        box-shadow: 0 0 0.5rem rgba(0,0,0, .2);
     }
 
     &__wrap {
