@@ -55,10 +55,8 @@ const asia = [
             date: "2020-03-17",
             time: "00:00"
         },
-        end: {
-            date: "2020-04-11",
-            time: "00:00"
-        }
+        easing: true,
+        source: "https://www.garda.com/fr/crisis24/alertes-de-securite/333831/iraq-authorities-announce-the-implementation-of-partial-curfew-from-april-23-update-22"
     },
     {
         flag: 'saudi_arabia',
