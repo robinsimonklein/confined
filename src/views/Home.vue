@@ -38,13 +38,23 @@
                             :beginning="country.beginning"
                             :estimated-end="country.estimatedEnd || null"
                             :end="country.end || null"
+                            :easing="country.easing || false"
                             :timezone="country.timezone || null"
                             :source="country.source || null"
                     />
                 </template>
             </Zone>
             <div class="home__infos">
-                <p>{{ $t('sources') }} : <a href="https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330" target="_blank" rel="noreferrer">TV5MONDE</a>,  <a href="https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19" target="_blank" rel="noreferrer">Wikipédia</a></p>
+                <ul class="home__legend">
+                    <li class="home__legend-item home__legend-item--danger"><i class="home__legend-color"></i>{{$t('legend.danger')}}</li>
+                    <li class="home__legend-item home__legend-item--easing"><i class="home__legend-color"></i>{{$t('legend.easing')}}</li>
+                    <li class="home__legend-item home__legend-item--success"><i class="home__legend-color"></i>{{$t('legend.success')}}</li>
+                </ul>
+                <p>{{ $t('sources') }} :
+                    <a href="https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330" target="_blank" rel="noreferrer">TV5MONDE</a>,
+                    <a href="https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19" target="_blank" rel="noreferrer">Wikipedia</a>,
+                    <a href="https://edition.cnn.com/2020/04/11/health/european-countries-reopening-coronavirus-intl/index.html" target="_blank" rel="noreferrer">CNN</a>
+                </p>
                 <p>{{ $t('last_update') }} : {{ $d(lastUpdate, 'short') }}</p>
             </div>
         </div>
@@ -169,6 +179,54 @@
         &__infos {
             @media screen and (max-width: 548px) {
                 margin-top: 2rem;
+            }
+        }
+
+        &__legend {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0;
+            list-style-type: none;
+
+            &-item {
+                display: inline-flex;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: left;
+                margin: .5rem 0;
+
+                &--danger {
+                    color: $color-danger;
+
+                    .home__legend-color{
+                        background: $color-danger;
+                    }
+                }
+                &--easing {
+                    color: $color-easing;
+
+                    .home__legend-color{
+                        background: $color-easing;
+                    }
+                }
+                &--success {
+                    color: $color-success;
+
+                    .home__legend-color{
+                        background: $color-success;
+                    }
+                }
+
+            }
+
+            &-color {
+                display: inline-block;
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 100%;
+                margin-right: 1rem;
+                flex-shrink: 0;
             }
         }
     }

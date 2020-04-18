@@ -14,6 +14,11 @@
   "source": "Source",
   "sources": "Sources",
   "asterisk_1": "Are considered here as confined, all countries having at least one city or zone with containment measures.",
+  "legend": {
+    "danger": "Lockdown (definitions may vary)",
+    "easing": "Easing restrictions",
+    "success": "Lockdown officially ended"
+  },
   "date": {
     "day": "day",
     "days": "days",
