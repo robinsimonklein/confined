@@ -14,6 +14,11 @@
   "source": "Source",
   "sources": "Sources",
   "asterisk_1": "Sont considérés ici comme confinés, tous les pays ayant au moins une ville ou région appliquant des mesures de confinement.",
+  "legend": {
+    "danger": "Confinement (les restrictions peuvent varier)",
+    "easing": "Allégement progressif des restrictions",
+    "success": "Confinement officiellement terminé"
+  },
   "date": {
     "day": "jour",
     "days": "jours",
