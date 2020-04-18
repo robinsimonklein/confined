@@ -8,6 +8,8 @@
 - [TV5MONDE](https://information.tv5monde.com/info/coronavirus-quels-sont-les-pays-confines-352330)
 - [Le Monde](https://www.lemonde.fr/planete/article/2020/03/30/coronavirus-quels-pays-sont-confines_6034936_3244.html)
 - [DW](https://www.dw.com/en/coronavirus-what-are-the-lockdown-measures-across-europe/a-52905137)
+- [CNN](https://edition.cnn.com/2020/04/11/health/european-countries-reopening-coronavirus-intl/index.html)
+
 ## Project setup
 ```
 yarn install
