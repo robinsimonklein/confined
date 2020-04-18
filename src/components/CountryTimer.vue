@@ -1,5 +1,5 @@
 <template>
-    <div :ref="flag" class="timer" :class="{'ended' : end}">
+    <div :ref="flag" class="timer" :class="[{'easing' : easing}, {'ended' : end}]">
         <div class="timer__wrap">
             <img class="timer__flag" :src="require(`@/assets/flags/${flag}.svg`)" :alt="flag" importance="low"/>
             <span class="timer__country">
@@ -51,6 +51,10 @@
             end: {
                 type: Object,
                 default: null
+            },
+            easing: {
+                type: Boolean,
+                default: false
             },
             timezone: {
                 type: String,
@@ -211,27 +215,31 @@
     }
 
     &__day {
-        color: white;
+        color: $color-text;
         font-size: 2.5rem;
         font-weight: bold;
         margin-bottom: 1rem;
         text-transform: uppercase;
 
         .ended & {
-            color: #7fcd91;
+            color: $color-success;
         }
     }
 
     &__duration {
         margin-top: 0;
         font-weight: bold;
-        color: #7fcd91;
+        color: $color-success;
     }
 
     &__count {
-        color: #f95850;
+        color: $color-danger;
         font-size: 2rem;
         font-weight: bold;
+
+        .easing &{
+            color: $color-easing
+        }
     }
 
     &__date {

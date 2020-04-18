@@ -1,5 +1,5 @@
 <template>
-    <div class="country-cell__wrap col col-xs-4 col-sm-2" :class="{'ended' : end}">
+    <div class="country-cell__wrap col col-xs-4 col-sm-2" :class="[{'easing' : easing}, {'ended' : end}]">
         <div :id="flag" class="country-cell" @click="select">
             <img class="country-cell__flag" :src="require(`@/assets/flags/${flag}.svg`)" :alt="flag" importance="low"/>
             <span class="country-cell__country">
@@ -29,6 +29,10 @@
             end: {
                 type: Object,
                 default: null
+            },
+            easing: {
+                type: Boolean,
+                default: false
             },
             timezone: {
                 type: String,
@@ -120,6 +124,11 @@
     &:hover {
         transition: all .2s ease;
         border: 1px solid rgba($color-primary, .3);
+
+
+        .ended & {
+            border: 1px solid rgba($color-success, .3);
+        }
     }
 
     &__wrap {
@@ -150,6 +159,7 @@
     &__day {
         font-weight: bold;
         font-size: 2.5rem;
+        color: $color-danger;
 
 
         @media screen and (max-width: 548px) {
@@ -161,8 +171,11 @@
             text-transform: capitalize;
         }
 
+        .easing & {
+            color: $color-easing;
+        }
         .ended & {
-            color: #7fcd91;
+            color: $color-success;
         }
     }
 }

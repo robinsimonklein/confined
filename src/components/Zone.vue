@@ -19,7 +19,8 @@
         &__name {
             font-size: 2rem;
             text-transform: uppercase;
-            border-bottom: 2px solid #f95850;
+            border-bottom: 2px solid $color-primary;
+            color: $color-white;
             display: inline-block;
         }
     }

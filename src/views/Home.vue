@@ -26,6 +26,7 @@
                                 :flag="country.flag"
                                 :beginning="country.beginning"
                                 :end="country.end || null"
+                                :easing="country.easing || false"
                                 @select="selectCountryCell(country.flag)"
                         />
                     </div>
