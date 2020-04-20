@@ -18,7 +18,6 @@
                 this.isVisible = scrollHeight > window.innerHeight
             },
             updateFixed(scrollHeight) {
-                console.log('body', document.body.scrollHeight,'footer', document.querySelector('.footer').offsetHeight, 'scroll', scrollHeight )
                 this.isFixed = !(scrollHeight + window.innerHeight > (document.body.scrollHeight - document.querySelector('.footer').offsetHeight))
             },
             scrollToTop() {
