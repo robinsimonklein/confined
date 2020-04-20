@@ -170,7 +170,7 @@ const europe = [
             time: "00:00"
         },
         estimatedEnd: {
-            date: "2020-05-09",
+            date: "2020-05-05",
             time: "00:00"
         },
         source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_the_United_Kingdom"

@@ -76,6 +76,7 @@
     "lebanon": "Lebanon",
     "canada": "Canada",
     "usa": "U.S.A.",
+    "guatemala": "Guatemala",
     "brazil": "Brazil",
     "bolivia": "Bolivia",
     "colombia": "Colombia",
@@ -88,12 +89,16 @@
     "zimbabwe": "Zimbabwe",
     "botswana": "Botswana",
     "nigeria": "Nigeria",
+    "liberia": "Liberia",
+    "kenya": "Kenya",
     "rwanda": "Rwanda",
     "south_africa": "South Africa",
     "madagascar": "Madagascar",
     "mauritius": "Mauritius",
     "malawi": "Malawi",
-    "tunisia": "Tunisia"
+    "tunisia": "Tunisia",
+    "kuwait": "Kuwait",
+    "chile": "Chile"
   },
   "zones": {
     "europe": "Europe",

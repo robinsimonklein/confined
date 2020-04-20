@@ -76,6 +76,7 @@
     "ecuador": "Equateur",
     "canada": "Canada",
     "usa": "U.S.A.",
+    "guatemala": "Guatemala",
     "brazil": "Brésil",
     "bolivia": "Bolivie",
     "colombia": "Colombie",
@@ -88,12 +89,16 @@
     "zimbabwe": "Zimbabwe",
     "botswana": "Botswana",
     "nigeria": "Nigeria",
+    "liberia": "Liberia",
+    "kenya": "Kenya",
     "rwanda": "Rwanda",
     "south_africa": "Afrique du Sud",
     "madagascar": "Madagascar",
     "mauritius": "Île Maurice",
     "malawi": "Malawi",
-    "tunisia": "Tunisie"
+    "tunisia": "Tunisie",
+    "kuwait": "Koweït",
+    "chile": "Chili"
   },
   "zones": {
     "europe": "Europe",

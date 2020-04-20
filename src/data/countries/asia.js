@@ -81,6 +81,18 @@ const asia = [
             time: "00:00"
         },
         source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Lebanon"
+    },
+    {
+        flag: 'kuwait',
+        beginning: {
+            date: "2020-03-13",
+            time: "00:00"
+        },
+        estimatedEnd: {
+            date: "2020-04-26",
+            time: "00:00"
+        },
+        source: "https://www.businessinsider.fr/us/countries-on-lockdown-coronavirus-italy-2020-3"
     }
 ]
 

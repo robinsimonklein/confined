@@ -23,6 +23,14 @@ const south_america = [
         },
     },
     {
+        flag: 'chile',
+        beginning: {
+            date: "2020-03-19",
+            time: "00:00"
+        },
+        source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Chile"
+    },
+    {
         flag: 'argentina',
         beginning: {
             date: "2020-03-19",

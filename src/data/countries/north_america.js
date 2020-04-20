@@ -14,6 +14,18 @@ const north_america = [
             time: "00:00"
         },
     },
+    {
+        flag: 'guatemala',
+        beginning: {
+            date: "2020-03-22",
+            time: "00:00"
+        },
+        estimatedEnd: {
+            date: "2020-04-27",
+            time: "00:00"
+        },
+        sources: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Guatemala"
+    },
 ]
 
 export default north_america

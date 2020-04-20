@@ -6,7 +6,7 @@ const africa = [
             time: "00:00"
         },
         estimatedEnd: {
-            date: "2020-04-20",
+            date: "2020-05-20",
             time: "00:00"
         }
     },
@@ -16,6 +16,12 @@ const africa = [
             date: "2020-03-22",
             time: "00:00"
         },
+        estimatedEnd: {
+            date: "2020-05-03",
+            time: "00:00"
+        },
+        easing: true,
+        source: "https://www.ouest-france.fr/sante/virus/coronavirus/coronavirus-couvre-feu-prolonge-au-guatemala-levee-progressive-du-confinement-en-tunisie-6812605"
     },
     {
         flag: 'algeria',
@@ -23,14 +29,23 @@ const africa = [
             date: "2020-03-24",
             time: "00:00"
         },
+        estimatedEnd: {
+            date: "2020-04-29",
+            time: "00:00"
+        },
         source: "https://www.jeuneafrique.com/925469/societe/maroc-tunisie-algerie-le-confinement-a-lepreuve-de-la-realite-sociale/"
     },
     {
         flag: 'zimbabwe',
         beginning: {
-            date: "2020-03-30",
+            date: "2020-03-20",
             time: "00:00"
         },
+        estimatedEnd: {
+            date: "2020-05-03",
+            time: "00:00"
+        },
+        source: "https://www.aljazeera.com/news/2020/04/zimbabwe-extends-coronavirus-lockdown-weeks-200419152145245.html"
     },
     {
         flag: 'botswana',
@@ -56,6 +71,18 @@ const africa = [
         },
     },
     {
+        flag: 'liberia',
+        beginning: {
+            date: "2020-04-10",
+            time: "00:00"
+        },
+        estimatedEnd: {
+            date: "2020-05-01",
+            time: "00:00"
+        },
+        sources: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Liberia"
+    },
+    {
         flag: 'rwanda',
         beginning: {
             date: "2020-03-22",
@@ -65,6 +92,14 @@ const africa = [
             date: "2020-04-19",
             time: "00:00"
         },
+    },
+    {
+        flag: 'kenya',
+        beginning: {
+            date: "2020-04-06",
+            time: "00:00"
+        },
+        easing: true
     },
     {
         flag: 'malawi',
@@ -99,6 +134,7 @@ const africa = [
             date: "2020-04-19",
             time: "00:00"
         },
+        easing: true,
         source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Mauritius"
     },
     {
