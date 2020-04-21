@@ -4,12 +4,20 @@
             <p v-html="$t('site_data_message')"></p>
             <p id="asterisk-1"><sup>1</sup> {{ $t('asterisk_1') }}</p>
         </div>
-        <div class="footer__links">
-            {{ $t('contribute') }} :
-            <a class="footer__link" href="https://github.com/robinsimonklein/confined" target="_blank" rel="noreferrer">
-                <img class="footer__link-img" src="@/assets/svg/github.svg" alt="logo github">
-            </a>
-        </div>
+        <ul class="footer__links">
+            <li class="footer__link-item">
+                {{ $t('contribute') }}&nbsp;:&nbsp;
+                <a href="https://github.com/robinsimonklein/confined" target="_blank" rel="noreferrer">
+                    <img class="footer__link-img" src="@/assets/svg/github.svg" alt="logo github">
+                </a>
+            </li>
+            <li class="footer__link-item">
+                <a class="footer__link" href="mailto:contact@robinsimonklein.com">{{ $t('suggest_improvement') }}</a>
+            </li>
+            <li class="footer__link-item">
+                <a class="footer__link" href="mailto:contact@robinsimonklein.com">{{ $t('report_error') }}</a>
+            </li>
+        </ul>
     </footer>
 </template>
 
@@ -54,9 +62,11 @@
 
         &__links {
             display: flex;
+            flex-direction: column;
             justify-content: flex-end;
             align-items: center;
-            text-transform: capitalize;
+            padding: 0;
+            list-style-type: none;
 
             @media screen and (max-width: 548px) {
                 width: 100%;
@@ -64,11 +74,24 @@
             }
         }
 
+        &__link-item {
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            font-size: 1rem;
+            margin-bottom: .2rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
         &__link {
-            font-size: 0;
-            margin-left: .5rem;
+
         }
         &__link-img {
+            margin-left: .5rem;
             height: 2rem;
         }
     }

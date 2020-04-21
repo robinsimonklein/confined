@@ -9,10 +9,12 @@
   "confinement_end_text": "Le pays a levé le confinement depuis le",
   "total": "total",
   "site_data_message": "Les données de ce site sont mises à jour manuellement et ne garantissent pas d'être exactes. Elles sont basées sur les actualités dans le monde.",
-  "contribute": "contribuer",
+  "contribute": "Contribuer",
   "last_update": "Dernière actualisation",
   "source": "Source",
   "sources": "Sources",
+  "report_error": "Signaler une erreur",
+  "suggest_improvement": "Suggérer une amélioration",
   "asterisk_1": "Sont considérés ici comme confinés, tous les pays ayant au moins une ville ou région appliquant des mesures de confinement.",
   "legend": {
     "danger": "Confinement (les restrictions peuvent varier)",

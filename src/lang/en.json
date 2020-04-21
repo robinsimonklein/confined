@@ -9,10 +9,12 @@
   "confinement_end_text": "The country stopped containment on",
   "total": "total",
   "site_data_message": "The data on this site is updated manually and does not guarantee to be exact. It's based on news from around the world.",
-  "contribute": "contribute",
+  "contribute": "Contribute",
   "last_update": "Last update",
   "source": "Source",
   "sources": "Sources",
+  "report_error": "Report an error",
+  "suggest_improvement": "Suggest improvement",
   "asterisk_1": "Are considered here as confined, all countries having at least one city or zone with containment measures.",
   "legend": {
     "danger": "Lockdown (definitions may vary)",
