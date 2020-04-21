@@ -16,7 +16,7 @@
             </transition-group>
         </template>
         <template v-else>
-            <transition-group name="flip-list" tag="div" class="row">
+            <transition-group name="flip-list" tag="div" class="zone__list row">
                 <CountryTimer
                         v-for="country in (sort ? sortedCountries : countries)"
                         :key="country.flag"
@@ -85,6 +85,10 @@
             border-bottom: 2px solid $color-primary;
             color: $color-white;
             display: inline-block;
+        }
+
+        &__list {
+            justify-content: center;
         }
     }
     .flip-grid-move, .flip-list-move {
