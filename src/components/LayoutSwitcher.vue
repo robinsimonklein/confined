@@ -1,11 +1,8 @@
 <template>
     <ul class="layout-switcher">
         <li
-                v-for="(layout, key) in layoutModes"
-                :key="key"
-                class="layout-switcher__item" @click="changeLayoutMode(layout)"
-                :class="{ 'selected' : layout === currentLayout }"
-                v-html="icons[layout]"
+                class="layout-switcher__item selected" @click="toggleLayoutMode()"
+                v-html="icons[currentLayout]"
         />
     </ul>
 </template>
@@ -30,7 +27,8 @@
             }
         },
         methods: {
-            changeLayoutMode(mode) {
+            toggleLayoutMode() {
+                const mode = this.currentLayout === layoutModes.GRID ? layoutModes.LIST : layoutModes.GRID
                 this.$router.replace({path: this.$route.path, query: {}})
                 this.$store.commit('setLayoutMode', mode)
             },
@@ -46,14 +44,10 @@
     padding: 0;
     list-style-type: none;
 
-    &__item {
-        margin-right: .5rem;
-
-    }
     &__icon {
         fill: #8faabf;
-        height: 1.6rem;
-        width: 1.6rem;
+        height: 2rem;
+        width: 2rem;
         cursor: pointer;
 
         .selected &{

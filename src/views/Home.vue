@@ -12,39 +12,13 @@
                     <p><strong>#StayAtHome</strong></p>
                 </div>
             </div>
-            <ZonesLinks :countries="countries" />
+            <ZonesLinks :countries="zones" />
             <Zone
-                    v-for="(zone, zoneKey) in countries"
+                    v-for="(zone, zoneKey) in zones"
                     :key="zoneKey"
-                    :name="zoneKey"
-            >
-                <template v-if="currentLayout === layoutModes.GRID">
-                    <div class="row">
-                        <CountryCell
-                                v-for="(country, countryKey) in zone"
-                                :key="countryKey"
-                                :flag="country.flag"
-                                :beginning="country.beginning"
-                                :end="country.end || null"
-                                :easing="country.easing || false"
-                                @select="selectCountryCell(country.flag)"
-                        />
-                    </div>
-                </template>
-                <template v-else>
-                    <CountryTimer
-                            v-for="(country, countryKey) in zone"
-                            :key="countryKey"
-                            :flag="country.flag"
-                            :beginning="country.beginning"
-                            :estimated-end="country.estimatedEnd || null"
-                            :end="country.end || null"
-                            :easing="country.easing || false"
-                            :timezone="country.timezone || null"
-                            :source="country.source || null"
-                    />
-                </template>
-            </Zone>
+                    :name="zone"
+            />
+
             <div class="home__infos">
                 <ul class="home__legend">
                     <li class="home__legend-item home__legend-item--danger"><i class="home__legend-color"></i>{{$t('legend.danger')}}</li>
@@ -66,40 +40,27 @@
     // @ is an alias to /src
 
     import zones from "../data/zones";
-    import CountryTimer from "../components/CountryTimer";
     import Zone from "../components/Zone";
     import ZonesLinks from "../components/ZonesLinks";
     import layoutModes from '../js/layoutModes';
-    import CountryCell from "../components/CountryCell";
 
     export default {
         name: 'Home',
         components: {
-            CountryCell,
             ZonesLinks,
             Zone,
-            CountryTimer
         },
         data() {
             return {
                 lastUpdate: new Date('2020-04-20'),
                 zones: zones,
-                countries: {}
             }
         },
         computed: {
-            currentLayout() {
-                return this.$store.state.layoutMode
-            },
+            currentLayout() { return this.$store.state.layoutMode },
             layoutModes() {
                 return layoutModes
-            }
-        },
-        methods: {
-            selectCountryCell(country) {
-                this.$router.push({path : this.$route.path, query: { c: country}})
-                this.$store.commit('setLayoutMode', layoutModes.LIST)
-            }
+            },
         },
         beforeCreate() {
             // Focus on country
@@ -107,12 +68,6 @@
                 this.$store.commit('setLayoutMode', layoutModes.LIST)
             }
         },
-        created() {
-            // Get countries data
-            for(let i = 0; i < this.zones.length; i++){
-                this.countries[this.zones[i]] = require(`../data/countries/${this.zones[i]}`).default
-            }
-        }
 
     }
 </script>

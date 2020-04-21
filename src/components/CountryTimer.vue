@@ -1,5 +1,5 @@
 <template>
-    <div :ref="flag" class="timer" :class="[{'easing' : easing}, {'ended' : end}]">
+    <div :ref="flag" class="timer col-xs-12 col-sm-10 col-lg-6" :class="[{'easing' : easing}, {'ended' : end}]">
         <div class="timer__wrap">
             <img class="timer__flag" :src="require(`@/assets/flags/${flag}.svg`)" :alt="flag" importance="low"/>
             <span class="timer__country">
@@ -176,13 +176,12 @@
     margin: 4rem 0;
 
     @media screen and (max-width: 548px) {
-        margin: 2rem 0;
+        margin: 1.5rem 0;
     }
 
     &__wrap {
         display: inline-flex;
         flex-direction: column;
-        max-width: 38rem;
         width: 100%;
         padding: 2rem 2rem;
         background: #001b31;

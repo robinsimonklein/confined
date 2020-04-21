@@ -6,7 +6,7 @@
                     v-for="(zone, key) in countries"
                     :key="key"
             >
-                <span class="zones-links__link" @click="goTo(key)">{{ $t(`zones.${key}`) }}</span>
+                <span class="zones-links__link" @click="goTo(zone)">{{ $t(`zones.${zone}`) }}</span>
             </li>
         </ul>
     </nav>
@@ -16,7 +16,7 @@
     export default {
         name: "ZonesLinks",
         props: {
-            countries: Object
+            countries: Array
         },
         methods: {
             goTo(zone) {
