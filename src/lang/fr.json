@@ -2,7 +2,7 @@
   "intro": {
     "title": "CONFINÉS DEPUIS QUAND&nbsp;?",
     "subtitle": "Pour le COVID19",
-    "text": "Le monde connaît actuellement une pandémie planétaire : la maladie <a href=\"https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19\" target=\"_blank\" rel=\"noreferrer\">COVID-19</a>, causée par le <a href=\"https://fr.wikipedia.org/wiki/Coronavirus\" target=\"_blank\" rel=\"noreferrer\">Coronavirus</a>. Afin de stopper la propagation du virus, de nombreux pays ont mis en place le confinement de leur population.<br/>Ce site présente une liste non-exhaustive de ces pays<sup>(<a href=\"#asterisk-1\">1</a>)</sup> ainsi que la durée depuis laquelle le confinement à été mis en place dans ces derniers."
+    "text": "Ce site présente une liste non-exhaustive des pays confinés<sup>(<a href=\"#asterisk-1\">1</a>)</sup> pour stopper le <a href=\"\">Coronavirus</a>, ainsi que la durée depuis laquelle le confinement à été mis en place dans ces derniers."
   },
   "confined_since": "Confinés depuis",
   "confinement_estimated" : "Prévu au moins jusqu'au",
