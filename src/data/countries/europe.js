@@ -41,10 +41,9 @@ const europe = [
             time: "00:00"
         },
         estimatedEnd: {
-            date: "2020-04-25",
+            date: "2020-05-09",
             time: "00:00"
         },
-        easing: true,
         source: 'https://fr.wikipedia.org/wiki/Confinement_de_2020_en_Espagne'
     },
     {
@@ -54,7 +53,7 @@ const europe = [
             time: "12:00"
         },
         estimatedEnd: {
-            date: "2020-05-03",
+            date: "2020-05-18",
             time: "00:00"
         },
         timezone: "Europe/Brussels",
@@ -79,10 +78,11 @@ const europe = [
             time: "00:00"
         },
         estimatedEnd: {
-            date: "2020-04-13",
+            date: "2020-05-04",
             time: "00:00"
         },
         easing: true,
+        source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Austria"
     },
     {
         flag: 'switzerland',
@@ -91,7 +91,7 @@ const europe = [
             time: "00:00"
         },
         estimatedEnd: {
-            date: "2020-04-27",
+            date: "2020-05-11",
             time: "00:00"
         },
         easing: true,
@@ -116,10 +116,11 @@ const europe = [
             time: "00:00"
         },
         estimatedEnd: {
-            date: "2020-04-13",
+            date: "2020-05-10",
             time: "00:00"
         },
-        easing: true
+        easing: true,
+        source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Denmark"
     },
     {
         flag: 'luxembourg',
@@ -150,14 +151,17 @@ const europe = [
         beginning: {
             date: "2020-03-19",
             time: "00:00"
-        },
-        easing: true,
+        },g: true,
         source: "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Norway"
     },
     {
         flag: 'iceland',
         beginning: {
             date: "2020-03-21",
+            time: "00:00"
+        },
+        estimatedEnd: {
+            date: "2020-05-04",
             time: "00:00"
         },
         easing: true,
@@ -203,7 +207,12 @@ const europe = [
             date: "2020-03-17",
             time: "00:00"
         },
-        easing: true
+        estimatedEnd: {
+            date: "2020-05-13",
+            time: "00:00"
+        },
+        easing: true,
+        source: 'https://bg.ambafrance.org/Les-mesures-en-vigueur-en-Bulgarie-pour-contenir-la-propagation-du-Covid-19'
     },
     {
         flag: 'poland',
@@ -235,6 +244,7 @@ const europe = [
             date: "2020-03-28",
             time: "00:00"
         },
+        source: "https://www.lefigaro.fr/flash-actu/coronavirus-la-hongrie-prolonge-le-confinement-jusqu-a-nouvel-ordre-20200409"
     },
     {
         flag: 'slovakia',
@@ -248,6 +258,10 @@ const europe = [
         flag: 'romania',
         beginning: {
             date: "2020-03-25",
+            time: "00:00"
+        },
+        estimatedEnd: {
+            date: "2020-05-15",
             time: "00:00"
         },
     },

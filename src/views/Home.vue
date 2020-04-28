@@ -52,7 +52,7 @@
         },
         data() {
             return {
-                lastUpdate: new Date('2020-04-20'),
+                lastUpdate: new Date('2020-04-28'),
                 zones: zones,
             }
         },
