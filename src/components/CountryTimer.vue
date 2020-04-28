@@ -5,7 +5,7 @@
             <span class="timer__country">
                 {{ $t('countries.'+flag) }}
             </span>
-            <p v-if="message" class="timer__message">{{ $t(message) }}</p>
+            <p v-if="message" class="timer__message">{{ $t(`messages.${message}`) }}</p>
             <template v-if="end">
                 <p class="timer__total">{{ $t('total') }} :</p>
                 <span class="timer__day">{{ spent.days }} {{ $t('date.days') }} </span>

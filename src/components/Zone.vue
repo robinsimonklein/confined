@@ -27,6 +27,7 @@
                         :easing="country.easing || false"
                         :timezone="country.timezone || null"
                         :source="country.source || null"
+                        :message="country.message || null"
                 />
             </transition-group>
         </template>

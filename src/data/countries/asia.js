@@ -5,11 +5,7 @@ const asia = [
             date: "2020-01-22",
             time: "00:00"
         },
-        end: {
-            date: "2020-04-08",
-            time: "00:00"
-        },
-        message: 'deconfinement',
+        message: 'wuhan',
         source: 'https://fr.wikipedia.org/wiki/Pandémie_de_Covid-19_en_Chine'
     },
     {
