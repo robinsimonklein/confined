@@ -1,20 +1,20 @@
 <template>
     <header class="header">
+        <!--
         <div class="header__switchers">
             <LayoutSwitcher class="header__layout-switcher"/>
             <SortSwitcher />
         </div>
-        <LanguageSwitcher />
+        -->
+        <LanguageSwitcher class="header__language" />
     </header>
 </template>
 
 <script>
     import LanguageSwitcher from "./LanguageSwitcher.vue";
-    import LayoutSwitcher from "./LayoutSwitcher";
-    import SortSwitcher from "./SortSwitcher";
     export default {
         name: "AppHeader",
-        components: {SortSwitcher, LayoutSwitcher, LanguageSwitcher}
+        components: {LanguageSwitcher}
     }
 </script>
 
@@ -40,6 +40,10 @@
 
         &__layout-switcher {
             margin-right: 1.4rem;
+        }
+
+        &__language {
+            margin-left: auto;
         }
     }
 </style>

@@ -16,6 +16,7 @@
   "report_error": "Signaler une erreur",
   "suggest_improvement": "Suggérer une amélioration",
   "asterisk_1": "Sont considérés ici comme confinés, tous les pays ayant au moins une ville ou région appliquant des mesures de confinement.",
+  "maintenance": "Ce site est actuellement en maintenance.<br>Plus d'infos : <a href=\"https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19#Strat%C3%A9gies_d'immunit%C3%A9_de_groupe_et_de_confinement\" rel=\"noreferrer\">Coronavirus et confinement dans le monde</a>.",
   "legend": {
     "danger": "Confinement (les restrictions peuvent varier)",
     "easing": "Allégement progressif des restrictions",

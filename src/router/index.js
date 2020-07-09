@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import {Trans} from "../plugins/Translation";
+import Maintenance from "../views/Maintenance";
 
 Vue.use(VueRouter)
 
@@ -9,7 +9,7 @@ const routes = [
     {
         path: '/:lang',
         name: 'Home',
-        component: Home,
+        component: Maintenance,
         beforeEnter: (Trans.routeMiddleware),
         meta: {
             title: 'pages.home.meta.title',

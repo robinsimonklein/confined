@@ -16,6 +16,7 @@
   "report_error": "Report an error",
   "suggest_improvement": "Suggest improvement",
   "asterisk_1": "Are considered here as confined, all countries having at least one city or zone with containment measures.",
+  "maintenance": "This site is currently under maintenance.<br>More informations : <a href=\"https://en.wikipedia.org/wiki/COVID-19_pandemic#Management\" rel=\"noreferrer\">Coronavirus and lockdown around the world</a>.",
   "legend": {
     "danger": "Lockdown (definitions may vary)",
     "easing": "Easing restrictions",
