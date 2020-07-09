@@ -1,5 +1,5 @@
 <template>
-    <div class="maintenance container">
+    <div class="maintenance">
         <img class="maintenance__icon" src="@/assets/svg/maintenance.svg" alt="maintenance" />
         <p class="maintenance__text" v-html="$t('maintenance')"></p>
     </div>
